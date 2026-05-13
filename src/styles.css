@@ -1,0 +1,82 @@
+/*
+ * [INPUT]: 依赖 App.jsx 的 className 约定，依赖 ScrollVelocity.css 的组件基础样式
+ * [OUTPUT]: 对外提供浅色底、纯黑 Helvetica 标识、主页居中布局和 React Bits 视觉适配
+ * [POS]: src 的全局样式层，约束页面气质而不掺入组件逻辑
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
+
+@import './components/ScrollVelocity.css';
+
+:root {
+  color-scheme: light;
+  --page-bg: #f7f4ed;
+  --page-fg: #000000;
+  --motion-ink: rgba(0, 0, 0, 0.1);
+  --font-display: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background: var(--page-bg);
+  color: var(--page-fg);
+  font-family: var(--font-display);
+}
+
+.home {
+  position: relative;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  padding: 24px;
+  isolation: isolate;
+}
+
+.home h1 {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  font-size: clamp(48px, 10vw, 132px);
+  font-weight: 900;
+  line-height: 1;
+}
+
+.velocity-stage {
+  position: absolute;
+  inset: 50% 0 auto;
+  transform: translateY(-50%) rotate(-6deg);
+  display: grid;
+  gap: 16px;
+  z-index: 0;
+  opacity: 0.95;
+}
+
+.home-parallax {
+  width: 100%;
+}
+
+.home-scroller {
+  color: var(--motion-ink);
+  font-family: var(--font-display);
+  font-size: clamp(64px, 14vw, 180px);
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: 0;
+  filter: none;
+}
+
+.velocity-copy {
+  padding-right: 0.35em;
+}
