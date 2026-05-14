@@ -1,0 +1,86 @@
+---
+/**
+ * [INPUT]: 依赖 content/pages/home.md 的 frontmatter 数据、/favicon.svg 标识资产，依赖 GlobalStyles 和 FieldFigure 组件
+ * [OUTPUT]: 对外提供 journal annex 风格的个人主页布局
+ * [POS]: layouts 的核心页面骨架，将 Markdown 数据和顶栏图标投射成可浏览的项目索引
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
+
+import FieldFigure from '@/components/FieldFigure.astro';
+import '@/styles/global.css';
+
+const { entry } = Astro.props;
+const projects = entry.projects;
+const primaryProjects = projects.slice(0, 2);
+const wideProjects = projects.slice(2);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={entry.description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{entry.browserTitle}</title>
+  </head>
+  <body>
+    <div class="journal-wrapper">
+      <div class="marginalia-left">{entry.eyebrow}</div>
+
+      <header class="journal-header">
+        <a class="journal-title" href="/" aria-label={`${entry.browserTitle} home`}>
+          <img src="/favicon.svg" alt="" />
+        </a>
+        <div class="meta-datum">
+          <span class="meta-label">Volume</span>
+          <span>{entry.volume}</span>
+        </div>
+        <div class="meta-datum">
+          <span class="meta-label">Date</span>
+          <span>{entry.dateLabel}</span>
+        </div>
+        <div class="meta-datum">
+          <span class="meta-label">Index</span>
+          <span>{entry.doi}</span>
+        </div>
+      </header>
+
+      <main class="journal-main">
+        <aside class="panel sidebar">
+          <section class="abstract">
+            <h1>{entry.abstractTitle}</h1>
+            <slot />
+          </section>
+
+          <section class="control-bank" aria-label="Site signals">
+            {entry.controls.map((control) => (
+              <div class="control-row">
+                <span>{control.label}</span>
+                <strong>{control.value}</strong>
+              </div>
+            ))}
+          </section>
+
+          <nav class="link-bank" aria-label="External links">
+            {entry.links.map((link) => (
+              <a href={link.href} target="_blank" rel="noreferrer">
+                <span>{link.label}</span>
+                <span>open</span>
+              </a>
+            ))}
+          </nav>
+        </aside>
+
+        <section class="figures-arena" aria-label="Project figures">
+          {primaryProjects.map((project) => (
+            <FieldFigure project={project} />
+          ))}
+          {wideProjects.map((project) => (
+            <FieldFigure project={project} wide />
+          ))}
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+---
+/**
+ * [INPUT]: 依赖 astro:content 读取 pages/home.md，依赖 JournalLayout 渲染页面结构
+ * [OUTPUT]: 对外提供 yeshu.dev 首页路由
+ * [POS]: pages 的首页入口，把 Markdown 真相源交给布局层呈现
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
+
+import { getCollection, render } from 'astro:content';
+import JournalLayout from '@/layouts/JournalLayout.astro';
+
+const entries = await getCollection('pages');
+const home = entries.find((entry) => entry.id === 'home.md' || entry.id === 'home');
+
+if (!home) {
+  throw new Error('Missing home markdown entry');
+}
+
+const { Content } = await render(home);
+---
+
+<JournalLayout entry={home.data}>
+  <Content />
+</JournalLayout>

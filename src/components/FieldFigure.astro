@@ -1,0 +1,44 @@
+---
+/**
+ * [INPUT]: 依赖 project frontmatter 数据中的 visual、metrics、href，依赖 ASCIIIcon React island
+ * [OUTPUT]: 对外提供 journal figure 项目卡片和 ASCII 项目图标场
+ * [POS]: components 的静态展示单元，把每个项目渲染成一块可扫描的研究图版
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
+
+import ASCIIIcon from './ASCIIIcon.jsx';
+
+const { project, wide = false } = Astro.props;
+const visual = project.visual;
+const iconText = visual.type === 'text' ? visual.value : project.id.toUpperCase();
+const iconSrc = visual.type === 'image' ? visual.value : undefined;
+---
+
+<article class:list={['figure-wrapper', wide && 'span-full']}>
+  <a class="figure-body" href={project.href} target="_blank" rel="noreferrer">
+    <div class="data-readout">
+      <span class="readout-line">SYS: {project.id.toUpperCase()}</span>
+      <span class="readout-line">{project.status}</span>
+    </div>
+
+    <div class="field-visual" aria-hidden="true">
+      <ASCIIIcon client:visible imageSrc={iconSrc} text={iconText} asciiFontSize={wide ? 7 : 8} />
+    </div>
+
+    <div class="project-copy">
+      <p class="project-kind">{project.kind}</p>
+      <h2>{project.name}</h2>
+      <p>{project.description}</p>
+      <p class="project-signal">{project.signal}</p>
+    </div>
+  </a>
+
+  <footer class="figure-caption">
+    <span class="fig-number">{project.figure}</span>
+    <div class="metric-strip">
+      {project.metrics.map((metric) => (
+        <span><b>{metric.label}</b>{metric.value}</span>
+      ))}
+    </div>
+  </footer>
+</article>
