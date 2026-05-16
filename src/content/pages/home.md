@@ -1,8 +1,34 @@
 ---
 title: "Yeshu Field Index"
+siteUrl: "https://yeshu.dev"
+canonicalPath: "/"
 masthead: "faction"
-browserTitle: "Yeshu"
-description: "Personal homepage for Yeshu: projects, experiments, and public code organized as a markdown-first field journal."
+browserTitle: "Yeshu | AI products, agent workflows, and public code"
+description: "Yeshu builds AI products, agent workflows, and small public software systems including Kyo, codeck, and trip-map-builder."
+keywords:
+  - "Yeshu"
+  - "hiyeshu"
+  - "AI products"
+  - "agent workflows"
+  - "Kyo"
+  - "codeck"
+  - "trip-map-builder"
+  - "Markdown-first websites"
+dateModified: "2026-05-16"
+identity:
+  name: "Yeshu"
+  alternateNames:
+    - "hiyeshu"
+  description: "Yeshu is an independent builder focused on AI products, agent workflows, Markdown-first publishing, and small software systems."
+  sameAs:
+    - "https://github.com/hiyeshu"
+  knowsAbout:
+    - "AI product design"
+    - "agent workflows"
+    - "Markdown-first content systems"
+    - "spatial interfaces"
+    - "presentation tooling"
+    - "developer tools"
 eyebrow: "ANNEX DOC NO. YESHU-001 | PERSONAL SYSTEMS LAB"
 volume: "01.A"
 dateLabel: "MAY 2026"
@@ -102,6 +128,8 @@ projects:
         value: "map"
 ---
 
-Yeshu builds small, sharp systems: products, agent workflows, and interfaces where the source material stays editable. This page treats Markdown as the canonical record and renders it as a monochrome field journal.
+Yeshu is an independent builder working on AI products, agent workflows, and small public software systems. The current field index points to Kyo, codeck, trip-map-builder, and the public GitHub code surface.
+
+This page treats Markdown as the canonical record and renders it as a monochrome field journal. The important content is available as visible text, structured data, and a root-level LLM context file so people and AI agents can identify the same entity without guessing.
 
 The homepage should not be a pile of cards. It should behave like an index: each project is a figure, each link has a reason to exist, and each repository explains what part of the operating system it belongs to.

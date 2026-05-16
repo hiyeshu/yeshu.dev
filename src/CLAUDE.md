@@ -2,7 +2,7 @@
 > L2 | 父级: ../CLAUDE.md
 
 成员清单
-content.config.js: Astro 内容集合 schema，校验 pages Markdown frontmatter。
+content.config.js: Astro 内容集合 schema，校验 pages Markdown frontmatter、GEO 元数据和身份数据。
 index.css: TailwindCSS v4 + shadcn Vercel 主题入口，定义设计令牌、暗色变量和基础层样式。
 components/: 展示组件目录，当前承载 FieldFigure 项目图版。
 content/: Markdown 真相源目录，当前承载 pages/home.md。

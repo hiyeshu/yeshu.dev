@@ -1,8 +1,8 @@
 ---
 /**
- * [INPUT]: 依赖 content/pages/home.md 的 frontmatter 数据、/favicon.svg 标识资产，依赖 GlobalStyles 和 FieldFigure 组件
- * [OUTPUT]: 对外提供 journal annex 风格的个人主页布局
- * [POS]: layouts 的核心页面骨架，将 Markdown 数据和顶栏图标投射成可浏览的项目索引
+ * [INPUT]: 依赖 content/pages/home.md 的 frontmatter 数据、GEO 身份数据、/favicon.svg 标识资产，依赖 GlobalStyles 和 FieldFigure 组件
+ * [OUTPUT]: 对外提供 journal annex 风格的个人主页布局、元标签和 JSON-LD 结构化数据
+ * [POS]: layouts 的核心页面骨架，将 Markdown 数据、机器可读身份和顶栏图标投射成可浏览的项目索引
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 
@@ -13,6 +13,70 @@ const { entry } = Astro.props;
 const projects = entry.projects;
 const primaryProjects = projects.slice(0, 2);
 const wideProjects = projects.slice(2);
+const canonicalUrl = new URL(entry.canonicalPath, entry.siteUrl).toString();
+const faviconUrl = new URL('/favicon.svg', entry.siteUrl).toString();
+const llmsUrl = new URL('/llms.txt', entry.siteUrl).toString();
+const personId = `${canonicalUrl}#person`;
+const profileId = `${canonicalUrl}#profile`;
+const websiteId = `${canonicalUrl}#website`;
+const projectListId = `${canonicalUrl}#projects`;
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      '@id': websiteId,
+      url: canonicalUrl,
+      name: entry.identity.name,
+      description: entry.description,
+      inLanguage: 'en',
+      publisher: { '@id': personId }
+    },
+    {
+      '@type': 'ProfilePage',
+      '@id': profileId,
+      url: canonicalUrl,
+      name: entry.title,
+      description: entry.description,
+      dateModified: entry.dateModified,
+      mainEntity: { '@id': personId },
+      hasPart: { '@id': projectListId }
+    },
+    {
+      '@type': 'Person',
+      '@id': personId,
+      name: entry.identity.name,
+      alternateName: entry.identity.alternateNames,
+      url: canonicalUrl,
+      image: faviconUrl,
+      description: entry.identity.description,
+      sameAs: entry.identity.sameAs,
+      knowsAbout: entry.identity.knowsAbout,
+      mainEntityOfPage: { '@id': profileId }
+    },
+    {
+      '@type': 'ItemList',
+      '@id': projectListId,
+      name: 'Yeshu project index',
+      itemListElement: projects.map((project, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        url: project.href,
+        name: project.name,
+        description: project.description,
+        item: {
+          '@type': 'CreativeWork',
+          '@id': `${canonicalUrl}#${project.id}`,
+          name: project.name,
+          url: project.href,
+          description: project.description,
+          creator: { '@id': personId },
+          sameAs: project.source ? [project.source] : undefined
+        }
+      }))
+    }
+  ]
+};
 ---
 
 <!doctype html>
@@ -21,7 +85,24 @@ const wideProjects = projects.slice(2);
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={entry.description} />
+    <meta name="keywords" content={entry.keywords.join(', ')} />
+    <meta name="author" content={entry.identity.name} />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta name="generator" content="Astro" />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="alternate" type="text/markdown" href={llmsUrl} title="LLM context for yeshu.dev" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta property="og:type" content="profile" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={entry.browserTitle} />
+    <meta property="og:description" content={entry.description} />
+    <meta property="og:image" content={faviconUrl} />
+    <meta property="og:site_name" content={entry.identity.name} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={entry.browserTitle} />
+    <meta name="twitter:description" content={entry.description} />
+    <meta name="twitter:image" content={faviconUrl} />
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
     <title>{entry.browserTitle}</title>
   </head>
   <body>

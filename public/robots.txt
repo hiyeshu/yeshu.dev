@@ -1,0 +1,9 @@
+# [INPUT]: 依赖 yeshu.dev 根域名与 sitemap.xml
+# [OUTPUT]: 对外声明公开页面允许抓取，并暴露 sitemap 入口
+# [POS]: public 的爬虫入口文件，被搜索引擎和 AI 检索代理首先读取
+# [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+
+User-agent: *
+Allow: /
+
+Sitemap: https://yeshu.dev/sitemap.xml

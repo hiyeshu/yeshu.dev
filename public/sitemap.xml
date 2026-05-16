@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  [INPUT]: 依赖 yeshu.dev 公开 URL 与首页更新时间
+  [OUTPUT]: 对外提供搜索引擎可读取的站点地图
+  [POS]: public 的索引入口文件，帮助爬虫发现首页
+  [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://yeshu.dev/</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>

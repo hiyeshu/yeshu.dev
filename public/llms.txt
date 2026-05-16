@@ -1,0 +1,35 @@
+# Yeshu
+
+> Yeshu is an independent builder focused on AI products, agent workflows, Markdown-first publishing, and small public software systems.
+
+yeshu.dev is a personal field index. It exists to help people and AI agents identify the same entity, projects, and public code surface without inferring from scattered links.
+
+Canonical URL: https://yeshu.dev/
+
+Primary identity:
+- Name: Yeshu
+- Alias: hiyeshu
+- GitHub: https://github.com/hiyeshu
+- Focus: AI products, agent workflows, spatial interfaces, Markdown-first content systems, presentation tooling, developer tools
+
+## Core Pages
+
+- [Homepage](https://yeshu.dev/): The canonical personal index for Yeshu, including project summaries and external links.
+
+## Projects
+
+- [GitHub / hiyeshu](https://github.com/hiyeshu): Public code surface for experiments, product scaffolds, and agent-facing tools.
+- [Kyo](https://www.kyo.is/): Spatial bookmark manager and AI OS product surface.
+- [codeck](https://codeck.sh/): AI presentation tool that turns notes, docs, and data into polished HTML presentations.
+- [trip-map-builder](https://github.com/hiyeshu/trip-map-builder): Agent skill for travel planning, Xiaohongshu research, and interactive map generation.
+
+## Machine-Readable Signals
+
+- [Sitemap](https://yeshu.dev/sitemap.xml): Search engine crawl map.
+- [Robots](https://yeshu.dev/robots.txt): Crawl access policy.
+- [Homepage JSON-LD](https://yeshu.dev/): Includes ProfilePage, Person, WebSite, and project ItemList structured data.
+
+## Optional
+
+- [Kyo product page](https://www.kyo.is/): Useful for understanding Yeshu's product taste and spatial interface direction.
+- [codeck product page](https://codeck.sh/): Useful for understanding Yeshu's Markdown-to-artifact workflow.
