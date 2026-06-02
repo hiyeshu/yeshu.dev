@@ -1,6 +1,6 @@
 # Yeshu
 
-> Yeshu is an independent builder focused on AI products, agent workflows, Markdown-first publishing, and small public software systems.
+> AI coder by night. I love simplifying the complex and beautifying the simple. From Ganzhou, cat lover, fueled by coffee.
 
 yeshu.dev is a bilingual personal field index with two public surfaces: Think for ideas and Build for shipped work. It exists to help people and AI agents identify the same entity, projects, public code surface, and writing without inferring from scattered links.
 
@@ -9,7 +9,12 @@ Canonical URL: https://yeshu.dev/
 Primary identity:
 - Name: Yeshu
 - Alias: hiyeshu
+- Role: Indie Developer · Designer
+- Mode: Design × Code
 - GitHub: https://github.com/hiyeshu
+- X: https://x.com/hiyeshu
+- Email: okyeshu@gmail.com
+- WeChat: HIYESHU
 - Focus: AI products, agent workflows, spatial interfaces, Markdown-first content systems, presentation tooling, developer tools
 
 ## Navigation
