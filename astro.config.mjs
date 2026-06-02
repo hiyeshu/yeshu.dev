@@ -10,8 +10,11 @@ import tailwindcss from '@tailwindcss/vite';
 import { fileURLToPath, URL } from 'node:url';
 import { defineConfig } from 'astro/config';
 
+import cloudflare from '@astrojs/cloudflare';
+
 export default defineConfig({
   integrations: [react()],
+
   vite: {
     plugins: [tailwindcss()],
     resolve: {
@@ -19,5 +22,7 @@ export default defineConfig({
         '@': fileURLToPath(new URL('./src', import.meta.url))
       }
     }
-  }
+  },
+
+  adapter: cloudflare()
 });

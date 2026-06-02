@@ -2,8 +2,14 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": [
+        "src/*"
+      ]
     }
   },
-  "include": ["src", "astro.config.mjs"]
+  "include": [
+    "src",
+    "astro.config.mjs",
+    "./worker-configuration.d.ts"
+  ]
 }
