@@ -14,7 +14,7 @@ keywords:
   - "codeck"
   - "trip-map-builder"
   - "Markdown-first websites"
-dateModified: "2026-05-31"
+dateModified: "2026-06-02"
 identity:
   name: "Yeshu"
   alternateNames:
@@ -22,6 +22,7 @@ identity:
   description: "Yeshu is an independent builder focused on AI products, agent workflows, Markdown-first publishing, and small software systems."
   sameAs:
     - "https://github.com/hiyeshu"
+    - "https://x.com/hiyeshu"
   knowsAbout:
     - "AI product design"
     - "agent workflows"
@@ -33,23 +34,23 @@ eyebrow: "ANNEX DOC NO. YESHU-001 | PERSONAL SYSTEMS LAB"
 volume: "01.A"
 dateLabel: "MAY 2026"
 doi: "yeshu.dev/build"
-abstractTitle: "Abstract. 01"
+abstractTitle: "Profile. 01"
 links:
-  - label: "Think"
-    href: "https://yeshu.dev/en/"
   - label: "GitHub"
     href: "https://github.com/hiyeshu"
-  - label: "Kyo"
-    href: "https://www.kyo.is/"
-  - label: "codeck"
-    href: "https://codeck.sh/"
+  - label: "Email"
+    href: "mailto:okyeshu@gmail.com"
+  - label: "X"
+    href: "https://x.com/hiyeshu"
 controls:
-  - label: "Source of Truth"
-    value: "Markdown"
-  - label: "Render Layer"
-    value: "Astro"
-  - label: "Visual Mode"
-    value: "Journal Annex"
+  - label: "Mode"
+    value: "Design × Code"
+  - label: "WeChat"
+    value: "HIYESHU"
+  - label: "Email"
+    value: "okyeshu@gmail.com"
+  - label: "X"
+    value: "@hiyeshu"
 projects:
   - id: "github"
     figure: "FIG. 1A"
@@ -130,8 +131,12 @@ projects:
         value: "map"
 ---
 
-Yeshu is an independent builder working on AI products, agent workflows, and small public software systems. The current field index points to Kyo, codeck, trip-map-builder, and the public GitHub code surface.
+AI coder by night. I love simplifying the complex and beautifying the simple. From Ganzhou, cat lover, fueled by coffee.
 
-This page treats Markdown as the canonical record and renders it as a monochrome field journal. The important content is available as visible text, structured data, and a root-level LLM context file so people and AI agents can identify the same entity without guessing.
+**Yeshu**  
+Indie Developer · Designer
 
-The build page should not be a pile of cards. It should behave like an index: each project is a figure, each link has a reason to exist, and each repository explains what part of the operating system it belongs to.
+Design × Code  
+WECHAT HIYESHU  
+EMAIL okyeshu@gmail.com  
+X @hiyeshu

@@ -14,7 +14,7 @@ keywords:
   - "codeck"
   - "trip-map-builder"
   - "Markdown 优先网站"
-dateModified: "2026-05-31"
+dateModified: "2026-06-02"
 identity:
   name: "Yeshu"
   alternateNames:
@@ -22,6 +22,7 @@ identity:
   description: "Yeshu 是一个独立 builder，关注 AI 产品、agent 工作流、Markdown 优先发布和小型软件系统。"
   sameAs:
     - "https://github.com/hiyeshu"
+    - "https://x.com/hiyeshu"
   knowsAbout:
     - "AI 产品设计"
     - "Agent 工作流"
@@ -33,23 +34,23 @@ eyebrow: "ANNEX DOC NO. YESHU-001 | PERSONAL SYSTEMS LAB"
 volume: "01.A"
 dateLabel: "MAY 2026"
 doi: "yeshu.dev/build"
-abstractTitle: "摘要 01"
+abstractTitle: "Profile. 01"
 links:
-  - label: "Think"
-    href: "https://yeshu.dev/"
   - label: "GitHub"
     href: "https://github.com/hiyeshu"
-  - label: "Kyo"
-    href: "https://www.kyo.is/"
-  - label: "codeck"
-    href: "https://codeck.sh/"
+  - label: "Email"
+    href: "mailto:okyeshu@gmail.com"
+  - label: "X"
+    href: "https://x.com/hiyeshu"
 controls:
-  - label: "真相源"
-    value: "Markdown"
-  - label: "渲染层"
-    value: "Astro"
-  - label: "视觉模式"
-    value: "期刊附件"
+  - label: "Mode"
+    value: "Design × Code"
+  - label: "WeChat"
+    value: "HIYESHU"
+  - label: "Email"
+    value: "okyeshu@gmail.com"
+  - label: "X"
+    value: "@hiyeshu"
 projects:
   - id: "github"
     figure: "FIG. 1A"
@@ -130,8 +131,12 @@ projects:
         value: "地图"
 ---
 
-Yeshu 是一个独立 builder，正在做 AI 产品、agent 工作流和小型公开软件系统。当前这个 field index 指向 Kyo、codeck、trip-map-builder，以及公开的 GitHub 代码表面。
+AI coder by night. I love simplifying the complex and beautifying the simple. From Ganzhou, cat lover, fueled by coffee.
 
-这个页面把 Markdown 当作规范记录，再渲染成黑白 field journal。重要内容同时以可见文本、结构化数据和根目录 LLM context 文件存在，让人和 AI agent 能识别同一个实体，不需要猜。
+**Yeshu**  
+Indie Developer · Designer
 
-Build 页面不应该是一堆卡片。它应该像索引：每个项目都是一张 figure，每个链接都有存在理由，每个仓库都说明自己属于这个操作系统的哪一部分。
+Design × Code  
+WECHAT HIYESHU  
+EMAIL okyeshu@gmail.com  
+X @hiyeshu
