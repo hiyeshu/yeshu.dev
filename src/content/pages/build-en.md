@@ -1,9 +1,9 @@
 ---
-title: "Yeshu Field Index"
+title: "Yeshu Build Index"
 siteUrl: "https://yeshu.dev"
-canonicalPath: "/"
+canonicalPath: "/en/build/"
 masthead: "faction"
-browserTitle: "Yeshu | AI products, agent workflows, and public code"
+browserTitle: "Yeshu Build | AI products, agent workflows, and public code"
 description: "Yeshu builds AI products, agent workflows, and small public software systems including Kyo, codeck, and trip-map-builder."
 keywords:
   - "Yeshu"
@@ -14,7 +14,7 @@ keywords:
   - "codeck"
   - "trip-map-builder"
   - "Markdown-first websites"
-dateModified: "2026-05-16"
+dateModified: "2026-05-31"
 identity:
   name: "Yeshu"
   alternateNames:
@@ -32,9 +32,11 @@ identity:
 eyebrow: "ANNEX DOC NO. YESHU-001 | PERSONAL SYSTEMS LAB"
 volume: "01.A"
 dateLabel: "MAY 2026"
-doi: "yeshu.dev/home"
+doi: "yeshu.dev/build"
 abstractTitle: "Abstract. 01"
 links:
+  - label: "Think"
+    href: "https://yeshu.dev/en/"
   - label: "GitHub"
     href: "https://github.com/hiyeshu"
   - label: "Kyo"
@@ -132,4 +134,4 @@ Yeshu is an independent builder working on AI products, agent workflows, and sma
 
 This page treats Markdown as the canonical record and renders it as a monochrome field journal. The important content is available as visible text, structured data, and a root-level LLM context file so people and AI agents can identify the same entity without guessing.
 
-The homepage should not be a pile of cards. It should behave like an index: each project is a figure, each link has a reason to exist, and each repository explains what part of the operating system it belongs to.
+The build page should not be a pile of cards. It should behave like an index: each project is a figure, each link has a reason to exist, and each repository explains what part of the operating system it belongs to.

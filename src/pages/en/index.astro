@@ -1,0 +1,47 @@
+---
+/**
+ * [INPUT]: 依赖 astro:content 读取 notes collection，依赖 NoteLayout 和 i18n 工具渲染英文 Think 目录页
+ * [OUTPUT]: 对外提供 /en/ 英文 Think 首页并只列出英文 listed notes
+ * [POS]: pages/en 的英文首页入口，是根路由中文 Think 的 i18n 镜像
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
+
+import { getCollection } from 'astro:content';
+import NoteLayout from '@/layouts/NoteLayout.astro';
+import { languageLinksForPath, notePath, notesForLang, uiText } from '@/lib/i18n.js';
+
+const lang = 'en';
+const ui = uiText[lang];
+const notes = notesForLang(await getCollection('notes'), lang);
+const languageLinks = languageLinksForPath(lang, { zh: '/', en: '/en/' });
+---
+
+<NoteLayout
+  title={ui.siteTitle}
+  description={ui.siteDescription}
+  canonicalPath="/en/"
+  notes={notes}
+  lang={lang}
+  languageLinks={languageLinks}
+>
+  <article class="notes-ledger">
+    <header class="notes-ledger-header">
+      <p class="note-kicker">{ui.indexKicker}</p>
+      <h1>{ui.indexTitle}</h1>
+    </header>
+
+    <div class="note-list">
+      {notes.map((note) => (
+        <a class="note-list-item" href={notePath(note)}>
+          <time datetime={note.data.pubDate.toISOString()}>
+            {note.data.pubDate.toISOString().slice(0, 10)}
+          </time>
+          <span>
+            <strong>{note.data.title}</strong>
+            <em>{note.data.description}</em>
+          </span>
+        </a>
+      ))}
+    </div>
+  </article>
+</NoteLayout>

@@ -1,15 +1,24 @@
 ---
 /**
- * [INPUT]: 依赖 content/pages/home.md 的 frontmatter 数据、GEO 身份数据、/favicon.svg 标识资产，依赖 GlobalStyles 和 FieldFigure 组件
- * [OUTPUT]: 对外提供 journal annex 风格的个人主页布局、元标签和 JSON-LD 结构化数据
- * [POS]: layouts 的核心页面骨架，将 Markdown 数据、机器可读身份和顶栏图标投射成可浏览的项目索引
+ * [INPUT]: 依赖 content/pages/build*.md 的 frontmatter 数据、GEO 身份数据、/favicon.svg 标识资产、i18n 路由工具，依赖 GlobalStyles、FieldFigure 和 SensoryLayer 组件
+ * [OUTPUT]: 对外提供 journal annex 风格的双语 Build 页面布局、常驻 CN/EN 语言切换、Think/Build 状态导航、元标签、JSON-LD 结构化数据和 soft 交互音效
+ * [POS]: layouts 的 Build 页面骨架，将 Markdown 数据、机器可读身份、顶栏图标、语言状态和感官反馈投射成可浏览的项目索引
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 
 import FieldFigure from '@/components/FieldFigure.astro';
+import SensoryLayer from '@/components/SensoryLayer.jsx';
+import { buildPath, homePath, uiText } from '@/lib/i18n.js';
 import '@/styles/global.css';
 
-const { entry } = Astro.props;
+const {
+  entry,
+  lang = 'zh',
+  languageLinks = []
+} = Astro.props;
+const ui = uiText[lang];
+const htmlLang = ui.htmlLang;
+const externalActionLabel = lang === 'en' ? 'open' : '打开';
 const projects = entry.projects;
 const primaryProjects = projects.slice(0, 2);
 const wideProjects = projects.slice(2);
@@ -29,7 +38,7 @@ const structuredData = {
       url: canonicalUrl,
       name: entry.identity.name,
       description: entry.description,
-      inLanguage: 'en',
+      inLanguage: htmlLang,
       publisher: { '@id': personId }
     },
     {
@@ -57,7 +66,7 @@ const structuredData = {
     {
       '@type': 'ItemList',
       '@id': projectListId,
-      name: 'Yeshu project index',
+      name: entry.title,
       itemListElement: projects.map((project, index) => ({
         '@type': 'ListItem',
         position: index + 1,
@@ -80,7 +89,7 @@ const structuredData = {
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={htmlLang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -106,24 +115,30 @@ const structuredData = {
     <title>{entry.browserTitle}</title>
   </head>
   <body>
+    <SensoryLayer client:load />
     <div class="journal-wrapper">
       <div class="marginalia-left">{entry.eyebrow}</div>
 
-      <header class="journal-header">
-        <a class="journal-title" href="/" aria-label={`${entry.browserTitle} home`}>
+      <header class:list={['journal-header', languageLinks.length > 1 && 'has-language-switch']}>
+        <a class="journal-title" href={homePath(lang)} aria-label="Yeshu Think">
           <img src="/favicon.svg" alt="" />
         </a>
-        <div class="meta-datum">
-          <span class="meta-label">Volume</span>
-          <span>{entry.volume}</span>
-        </div>
-        <div class="meta-datum">
-          <span class="meta-label">Date</span>
-          <span>{entry.dateLabel}</span>
-        </div>
-        <div class="meta-datum">
-          <span class="meta-label">Index</span>
-          <span>{entry.doi}</span>
+        <div class="header-actions">
+          {languageLinks.length > 1 && (
+            <nav class="language-switch header-language-switch" aria-label="Language versions">
+              {languageLinks.map((link) => (
+                <a href={link.href} aria-current={link.active ? 'page' : undefined}>{link.label}</a>
+              ))}
+            </nav>
+          )}
+          <a class="meta-datum meta-link nav-think" href={homePath(lang)} data-nav-label={ui.navThink}>
+            <span class="meta-label">{ui.notesLabel}</span>
+            <span>{ui.notesLabel}</span>
+          </a>
+          <a class="meta-datum meta-link nav-build" href={buildPath(lang)} aria-current="page" data-nav-label={ui.navBuild}>
+            <span class="meta-label">{ui.projectsLabel}</span>
+            <span>{ui.projectsLabel}</span>
+          </a>
         </div>
       </header>
 
@@ -147,13 +162,13 @@ const structuredData = {
             {entry.links.map((link) => (
               <a href={link.href} target="_blank" rel="noreferrer">
                 <span>{link.label}</span>
-                <span>open</span>
+                <span>{externalActionLabel}</span>
               </a>
             ))}
           </nav>
         </aside>
 
-        <section class="figures-arena" aria-label="Project figures">
+        <section class="figures-arena" id="projects" aria-label="Project figures">
           {primaryProjects.map((project) => (
             <FieldFigure project={project} />
           ))}

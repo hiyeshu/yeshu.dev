@@ -1,0 +1,228 @@
+{
+  "translatedAt": "2026-06-02T14:39:51.239Z",
+  "count": 37,
+  "notes": [
+    {
+      "sourceSlug": "2022年问自己",
+      "file": "2022年问自己-en.md",
+      "title": "\"Ask yourself\" in 2022",
+      "routeSlug": "ask-yourself-in-2022"
+    },
+    {
+      "sourceSlug": "not-all-problems-need-solving",
+      "file": "not-all-problems-need-solving-en.md",
+      "title": "Not all problems need to be solved",
+      "routeSlug": "not-all-problems-need-to-be-solved"
+    },
+    {
+      "sourceSlug": "spend-token-on-useless-things",
+      "file": "spend-token-on-useless-things-en.md",
+      "title": "Spend Token on Useless Things",
+      "routeSlug": "spend-token-on-useless-things"
+    },
+    {
+      "sourceSlug": "一个糟糕的计划胜过没有计划",
+      "file": "一个糟糕的计划胜过没有计划-en.md",
+      "title": "A bad plan is better than no plan",
+      "routeSlug": "a-bad-plan-is-better-than-no-plan"
+    },
+    {
+      "sourceSlug": "一种破坏性工具",
+      "file": "一种破坏性工具-en.md",
+      "title": "a destructive tool",
+      "routeSlug": "a-destructive-tool"
+    },
+    {
+      "sourceSlug": "上瘾运气的诱饵与羊了个羊",
+      "file": "上瘾运气的诱饵与羊了个羊-en.md",
+      "title": "Addicted? Luck's Bait and Sheep Got a Sheep",
+      "routeSlug": "addicted-lucks-bait-and-sheep-got-a-sheep"
+    },
+    {
+      "sourceSlug": "专注焦虑与为什么会累",
+      "file": "专注焦虑与为什么会累-en.md",
+      "title": "Concentration, Anxiety and Why Are We Tired?",
+      "routeSlug": "concentration-anxiety-and-why-are-we-tired"
+    },
+    {
+      "sourceSlug": "为什么我们不能好好生活",
+      "file": "为什么我们不能好好生活-en.md",
+      "title": "Why can't we live well?",
+      "routeSlug": "why-cant-we-live-well"
+    },
+    {
+      "sourceSlug": "休息和恢复",
+      "file": "休息和恢复-en.md",
+      "title": "rest and recovery",
+      "routeSlug": "rest-and-recovery"
+    },
+    {
+      "sourceSlug": "利用内啡肽快速进入状态",
+      "file": "利用内啡肽快速进入状态-en.md",
+      "title": "Use endorphins to get in the mood quickly",
+      "routeSlug": "use-endorphins-to-get-in-the-mood-quickly"
+    },
+    {
+      "sourceSlug": "压力山大到底是什么",
+      "file": "压力山大到底是什么-en.md",
+      "title": "What exactly is stress?",
+      "routeSlug": "what-exactly-is-stress"
+    },
+    {
+      "sourceSlug": "厨师和厨子是创造还是模仿",
+      "file": "厨师和厨子是创造还是模仿-en.md",
+      "title": "Chefs and cooks, are they creating or imitating?",
+      "routeSlug": "chefs-and-cooks-are-they-creating-or-imitating"
+    },
+    {
+      "sourceSlug": "及时的庆祝",
+      "file": "及时的庆祝-en.md",
+      "title": "timely celebration",
+      "routeSlug": "timely-celebration"
+    },
+    {
+      "sourceSlug": "如何才会改变行为提示比动机更重要",
+      "file": "如何才会改变行为提示比动机更重要-en.md",
+      "title": "How will behavior change? Tips are more important than motivation",
+      "routeSlug": "how-will-behavior-change-tips-are-more-important-than-motivation"
+    },
+    {
+      "sourceSlug": "如何找到热爱的事情",
+      "file": "如何找到热爱的事情-en.md",
+      "title": "How do you find something you love?",
+      "routeSlug": "how-do-you-find-something-you-love"
+    },
+    {
+      "sourceSlug": "如何表达明白一件事",
+      "file": "如何表达明白一件事-en.md",
+      "title": "How to express that you understand something?",
+      "routeSlug": "how-to-express-that-you-understand-something"
+    },
+    {
+      "sourceSlug": "工作的热爱是如何消亡的",
+      "file": "工作的热爱是如何消亡的-en.md",
+      "title": "How does the love of work die?",
+      "routeSlug": "how-does-the-love-of-work-die"
+    },
+    {
+      "sourceSlug": "影响决策的几个因素上",
+      "file": "影响决策的几个因素上-en.md",
+      "title": "Several factors affecting decision-making (Part 1)",
+      "routeSlug": "several-factors-affecting-decision-making-part-1"
+    },
+    {
+      "sourceSlug": "影响决策的几个因素下",
+      "file": "影响决策的几个因素下-en.md",
+      "title": "Several factors affecting decision-making (Part 2)",
+      "routeSlug": "several-factors-affecting-decision-making-part-2"
+    },
+    {
+      "sourceSlug": "成本是放弃了的最大代价",
+      "file": "成本是放弃了的最大代价-en.md",
+      "title": "Cost is the biggest price of giving up",
+      "routeSlug": "cost-is-the-biggest-price-of-giving-up"
+    },
+    {
+      "sourceSlug": "我们看足球是在看什么",
+      "file": "我们看足球是在看什么-en.md",
+      "title": "When we watch football, what are we watching?",
+      "routeSlug": "when-we-watch-football-what-are-we-watching"
+    },
+    {
+      "sourceSlug": "打算就是在拖延",
+      "file": "打算就是在拖延-en.md",
+      "title": "\"Plan\" means procrastinating.",
+      "routeSlug": "plan-means-procrastinating"
+    },
+    {
+      "sourceSlug": "把自己产品化",
+      "file": "把自己产品化-en.md",
+      "title": "Productize yourself",
+      "routeSlug": "productize-yourself"
+    },
+    {
+      "sourceSlug": "把资源分配给机会而非问题",
+      "file": "把资源分配给机会而非问题-en.md",
+      "title": "Allocate resources to opportunities, not problems",
+      "routeSlug": "allocate-resources-to-opportunities-not-problems"
+    },
+    {
+      "sourceSlug": "晋升的原因",
+      "file": "晋升的原因-en.md",
+      "title": "Reason for promotion?",
+      "routeSlug": "reason-for-promotion"
+    },
+    {
+      "sourceSlug": "正确与模糊ai的意义",
+      "file": "正确与模糊ai的意义-en.md",
+      "title": "Correctness and ambiguity, the meaning of AI.",
+      "routeSlug": "correctness-and-ambiguity-the-meaning-of-ai"
+    },
+    {
+      "sourceSlug": "沟通中如何获取绝对话语权",
+      "file": "沟通中如何获取绝对话语权-en.md",
+      "title": "How to gain absolute say in communication",
+      "routeSlug": "how-to-gain-absolute-say-in-communication"
+    },
+    {
+      "sourceSlug": "游泳教会我什么缓慢甚至停下来",
+      "file": "游泳教会我什么缓慢甚至停下来-en.md",
+      "title": "What does swimming teach me? Slowly, even stop.",
+      "routeSlug": "what-does-swimming-teach-me-slowly-even-stop"
+    },
+    {
+      "sourceSlug": "理性是情绪的奴隶",
+      "file": "理性是情绪的奴隶-en.md",
+      "title": "Reason is the slave of emotion",
+      "routeSlug": "reason-is-the-slave-of-emotion"
+    },
+    {
+      "sourceSlug": "目标的反面是另一个目标",
+      "file": "目标的反面是另一个目标-en.md",
+      "title": "The opposite of a goal is another goal",
+      "routeSlug": "the-opposite-of-a-goal-is-another-goal"
+    },
+    {
+      "sourceSlug": "真正想要的是什么",
+      "file": "真正想要的是什么-en.md",
+      "title": "\"What do you really want?\"",
+      "routeSlug": "what-do-you-really-want"
+    },
+    {
+      "sourceSlug": "给打工人的-20-条建议",
+      "file": "给打工人的-20-条建议-en.md",
+      "title": "20 tips for “workers”",
+      "routeSlug": "20-tips-for-workers"
+    },
+    {
+      "sourceSlug": "良好睡眠周期",
+      "file": "良好睡眠周期-en.md",
+      "title": "good sleep cycle",
+      "routeSlug": "good-sleep-cycle"
+    },
+    {
+      "sourceSlug": "设计师的工具是如何演变的",
+      "file": "设计师的工具是如何演变的-en.md",
+      "title": "How have designers’ tools evolved?",
+      "routeSlug": "how-have-designers-tools-evolved"
+    },
+    {
+      "sourceSlug": "语言对行为的影响",
+      "file": "语言对行为的影响-en.md",
+      "title": "The impact of language on behavior",
+      "routeSlug": "the-impact-of-language-on-behavior"
+    },
+    {
+      "sourceSlug": "迷茫的时候做更困难的事情",
+      "file": "迷茫的时候做更困难的事情-en.md",
+      "title": "When you are confused, do more difficult things",
+      "routeSlug": "when-you-are-confused-do-more-difficult-things"
+    },
+    {
+      "sourceSlug": "长期的一致性打败短期的高强度",
+      "file": "长期的一致性打败短期的高强度-en.md",
+      "title": "Long-term consistency beats short-term intensity",
+      "routeSlug": "long-term-consistency-beats-short-term-intensity"
+    }
+  ]
+}

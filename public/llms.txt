@@ -2,7 +2,7 @@
 
 > Yeshu is an independent builder focused on AI products, agent workflows, Markdown-first publishing, and small public software systems.
 
-yeshu.dev is a personal field index. It exists to help people and AI agents identify the same entity, projects, and public code surface without inferring from scattered links.
+yeshu.dev is a bilingual personal field index with two public surfaces: Think for ideas and Build for shipped work. It exists to help people and AI agents identify the same entity, projects, public code surface, and writing without inferring from scattered links.
 
 Canonical URL: https://yeshu.dev/
 
@@ -12,9 +12,92 @@ Primary identity:
 - GitHub: https://github.com/hiyeshu
 - Focus: AI products, agent workflows, spatial interfaces, Markdown-first content systems, presentation tooling, developer tools
 
-## Core Pages
+## Navigation
 
-- [Homepage](https://yeshu.dev/): The canonical personal index for Yeshu, including project summaries and external links.
+- [Think / Chinese](https://yeshu.dev/): Default Chinese public thinking surface.
+- [Think / English](https://yeshu.dev/en/): English mirror of the Think surface.
+- [Build / Chinese](https://yeshu.dev/build/): Chinese project index for shipped tools, products, repositories, and demos.
+- [Build / English](https://yeshu.dev/en/build/): English mirror of the project index.
+
+## Think / English
+
+- [Spend Token on Useless Things](https://yeshu.dev/en/notes/spend-token-on-useless-things/): Agent loops, like people, are products of their environments. Token can be spent not only on output, but on shaping the environment an agent lives in.
+- [Correctness and ambiguity, the meaning of AI.](https://yeshu.dev/en/notes/correctness-and-ambiguity-the-meaning-of-ai/): Fuzzy means average, which may be the greatest value of AI.
+- [Long-term consistency beats short-term intensity](https://yeshu.dev/en/notes/long-term-consistency-beats-short-term-intensity/): We love fireworks, but lights are our constant companion.
+- [Not all problems need to be solved](https://yeshu.dev/en/notes/not-all-problems-need-to-be-solved/): Not every problem in life needs to be solved. Living with problems is the norm in life. Spend your energy on what matters.
+- ["Ask yourself" in 2022](https://yeshu.dev/en/notes/ask-yourself-in-2022/): What didn’t I do because I was afraid?
+- [Why can't we live well?](https://yeshu.dev/en/notes/why-cant-we-live-well/): The limits of language are also the limits of thought. ——Wittgenstein
+- [When we watch football, what are we watching?](https://yeshu.dev/en/notes/when-we-watch-football-what-are-we-watching/): Football is a war in peacetime
+- [Reason is the slave of emotion](https://yeshu.dev/en/notes/reason-is-the-slave-of-emotion/): When we make an action, we always rely on emotions (intuition and passion), and then use reason to justify our actions with the benefit of hindsight.
+- [rest and recovery](https://yeshu.dev/en/notes/rest-and-recovery/): rest and recovery
+- [How does the love of work die?](https://yeshu.dev/en/notes/how-does-the-love-of-work-die/): How does the love of work die?
+- [timely celebration](https://yeshu.dev/en/notes/timely-celebration/): You care so much about criticism because you accept praise.
+- [Concentration, Anxiety and Why Are We Tired?](https://yeshu.dev/en/notes/concentration-anxiety-and-why-are-we-tired/): People need to work, but they actually need "rest".
+- [Addicted? Luck's Bait and Sheep Got a Sheep](https://yeshu.dev/en/notes/addicted-lucks-bait-and-sheep-got-a-sheep/): Why is "Sheep, a Sheep" so addictive?
+- [How to express that you understand something?](https://yeshu.dev/en/notes/how-to-express-that-you-understand-something/): Only by expressing it can we truly understand
+- [How to gain absolute say in communication](https://yeshu.dev/en/notes/how-to-gain-absolute-say-in-communication/): Giving up or denying something reveals more information than description and approval.
+- [How will behavior change? Tips are more important than motivation](https://yeshu.dev/en/notes/how-will-behavior-change-tips-are-more-important-than-motivation/): The occurrence of behavior will be affected by motivation, ability, and prompts
+- [The impact of language on behavior](https://yeshu.dev/en/notes/the-impact-of-language-on-behavior/): Language is a mental model
+- [What does swimming teach me? Slowly, even stop.](https://yeshu.dev/en/notes/what-does-swimming-teach-me-slowly-even-stop/): Slowness may not be a gesture of moving forward
+- [a destructive tool](https://yeshu.dev/en/notes/a-destructive-tool/): If we don’t criticize others harshly, we actually don’t accept that kind of ourselves.
+- [Productize yourself](https://yeshu.dev/en/notes/productize-yourself/): Productize yourself
+- ["What do you really want?"](https://yeshu.dev/en/notes/what-do-you-really-want/): Reasons why you can’t create the life you want
+- [Chefs and cooks, are they creating or imitating?](https://yeshu.dev/en/notes/chefs-and-cooks-are-they-creating-or-imitating/): chef and cook
+- [How have designers’ tools evolved?](https://yeshu.dev/en/notes/how-have-designers-tools-evolved/): No one cares about you or your product, people only care about what they can get.
+- [When you are confused, do more difficult things](https://yeshu.dev/en/notes/when-you-are-confused-do-more-difficult-things/): do more difficult things
+- [Use endorphins to get in the mood quickly](https://yeshu.dev/en/notes/use-endorphins-to-get-in-the-mood-quickly/): Use endorphins to get in the mood quickly
+- ["Plan" means procrastinating.](https://yeshu.dev/en/notes/plan-means-procrastinating/): "Plan" means procrastinating.
+- [Allocate resources to opportunities, not problems](https://yeshu.dev/en/notes/allocate-resources-to-opportunities-not-problems/): "Results Management" was published in 1964 and has experienced nearly 60 years of baptism.
+- [Cost is the biggest price of giving up](https://yeshu.dev/en/notes/cost-is-the-biggest-price-of-giving-up/): [Economics] Cost is the biggest price of giving up
+- [Reason for promotion?](https://yeshu.dev/en/notes/reason-for-promotion/): Performance of ability drives success, but when ability cannot be measured, social relationships drive success.
+- [Several factors affecting decision-making (Part 1)](https://yeshu.dev/en/notes/several-factors-affecting-decision-making-part-1/): subjective intuition
+- [Several factors affecting decision-making (Part 2)](https://yeshu.dev/en/notes/several-factors-affecting-decision-making-part-2/): Several factors affecting decision-making (Part 2)
+- [20 tips for “workers”](https://yeshu.dev/en/notes/20-tips-for-workers/): In negotiations, those who don’t care always win.
+- [The opposite of a goal is another goal](https://yeshu.dev/en/notes/the-opposite-of-a-goal-is-another-goal/): The opposite of one goal should be another goal.
+- [A bad plan is better than no plan](https://yeshu.dev/en/notes/a-bad-plan-is-better-than-no-plan/): No matter how simple or complex a thing is, it will be filled with all the time you give it.
+- [How do you find something you love?](https://yeshu.dev/en/notes/how-do-you-find-something-you-love/): No decision in life is wrong because you never know if another choice is the right one.
+- [good sleep cycle](https://yeshu.dev/en/notes/good-sleep-cycle/): Only in sleep can the conscious mind rest, while the subconscious mind gradually matures and forms wisdom. And not having time to rest leads to agitation, dullness, irritability, and inability to distinguish priorities. This is both a cause and a consequence of fatigue. ——Russell, "On Happiness"
+- [What exactly is stress?](https://yeshu.dev/en/notes/what-exactly-is-stress/): When something is difficult, often it is not that it is really difficult, but that you think it is difficult, you believe it is difficult, and in order to prove your point of view, you cross many obstacles and try your best to finally make it difficult. ——Zhang Xiaoyu
+
+## Think / Chinese
+
+- [把 Token 花在没用的地方](https://yeshu.dev/notes/spend-token-on-useless-things/): Agent loop 和人一样，都是环境的产物。Token 不只用来产出，也可以用来塑造 agent 的环境。
+- [正确与模糊，AI的意义。](https://yeshu.dev/notes/正确与模糊ai的意义/): 模糊意味这平均，这或许是AI最大的价值。
+- [长期的一致性打败短期的高强度](https://yeshu.dev/notes/长期的一致性打败短期的高强度/): 我们爱烟花，但却是灯光常伴。
+- [不是所有问题都要解决](https://yeshu.dev/notes/not-all-problems-need-solving/): 不是⽣活中的每⼀个问题都要解决，和问题共处是⼈⽣常态。把精⼒⽤在重要的事情上。
+- [2022年「问自己」](https://yeshu.dev/notes/2022年问自己/): 因为害怕我没有做什么？
+- [为什么我们不能好好生活？](https://yeshu.dev/notes/为什么我们不能好好生活/): 语言的界限也就是思想的界限。——维特根斯坦
+- [我们看足球，是在看什么？](https://yeshu.dev/notes/我们看足球是在看什么/): 足球是和平年代的战争
+- [理性是情绪的奴隶](https://yeshu.dev/notes/理性是情绪的奴隶/): 我们做出一个行为，总是依靠情绪（直觉和激情），然后再通过理性为自己的行为做一个“「事后诸葛亮」的辩护。
+- [休息和恢复](https://yeshu.dev/notes/休息和恢复/): 休息和恢复
+- [工作的热爱是如何消亡的？](https://yeshu.dev/notes/工作的热爱是如何消亡的/): 工作的热爱是如何消亡的？
+- [及时的庆祝](https://yeshu.dev/notes/及时的庆祝/): 对批评那么在意，是因为你接受了表扬。
+- [专注、焦虑与为什么会累？](https://yeshu.dev/notes/专注焦虑与为什么会累/): 人需要工作，其实是需要「休息」。
+- [上瘾？运气的诱饵与羊了个羊](https://yeshu.dev/notes/上瘾运气的诱饵与羊了个羊/): 为什么《羊了个羊》会这么让人成瘾?
+- [如何表达明白一件事？](https://yeshu.dev/notes/如何表达明白一件事/): 表达出来，才能真正理解
+- [沟通中，如何获取绝对话语权](https://yeshu.dev/notes/沟通中如何获取绝对话语权/): 放弃或者否定一件事情，透露出来的信息量要比描述和赞同更多
+- [如何才会改变行为？提示比动机更重要](https://yeshu.dev/notes/如何才会改变行为提示比动机更重要/): 行为的发生会受到动机、能力、提示的影响
+- [语言对行为的影响](https://yeshu.dev/notes/语言对行为的影响/): 语言是一种思维模型
+- [游泳教会我什么？缓慢、甚至停下来。](https://yeshu.dev/notes/游泳教会我什么缓慢甚至停下来/): 慢，未必不是一种向前迈进的姿态
+- [一种破坏性工具](https://yeshu.dev/notes/一种破坏性工具/): 我们不苛责他人，其实是不接纳那样的自己。
+- [把自己产品化](https://yeshu.dev/notes/把自己产品化/): 把自己产品化
+- [「真正想要的是什么？」](https://yeshu.dev/notes/真正想要的是什么/): 无法创造自己想要的生活的原因
+- [厨师和厨子，是创造还是模仿？](https://yeshu.dev/notes/厨师和厨子是创造还是模仿/): 厨师和厨子
+- [设计师的工具是如何演变的？](https://yeshu.dev/notes/设计师的工具是如何演变的/): 没人关心你或你的产品，人们只在意他们能够获得什么。
+- [迷茫的时候，做更困难的事情](https://yeshu.dev/notes/迷茫的时候做更困难的事情/): 去做更困难的事情
+- [利用内啡肽快速进入状态](https://yeshu.dev/notes/利用内啡肽快速进入状态/): 利用内啡肽快速进入状态
+- [“打算”，就是在拖延。](https://yeshu.dev/notes/打算就是在拖延/): “打算”，就是在拖延。
+- [把资源分配给机会，而非问题](https://yeshu.dev/notes/把资源分配给机会而非问题/): 《成果管理》出版于 1964 年，经历了接近 60 年的洗礼。
+- [成本是放弃了的最大代价](https://yeshu.dev/notes/成本是放弃了的最大代价/): 【经济学】成本是放弃了的最大代价
+- [晋升的原因？](https://yeshu.dev/notes/晋升的原因/): 能力的表现驱动成功，但当能力无法衡量的时候，社会关系驱动成功。
+- [影响决策的几个因素（上）](https://yeshu.dev/notes/影响决策的几个因素上/): 主观直觉
+- [影响决策的几个因素（下）](https://yeshu.dev/notes/影响决策的几个因素下/): 影响决策的几个因素（下）
+- [给「打工人」的 20 条建议](https://yeshu.dev/notes/给打工人的-20-条建议/): 谈判中，不在乎者恒赢。
+- [目标的反面是另一个目标](https://yeshu.dev/notes/目标的反面是另一个目标/): 一个目标的反面应该是另外一个目标。
+- [一个糟糕的计划胜过没有计划](https://yeshu.dev/notes/一个糟糕的计划胜过没有计划/): 不管一件事是简单还是复杂，它都会充满你给它的所有时
+- [如何找到热爱的事情？](https://yeshu.dev/notes/如何找到热爱的事情/): 人生没有任何决定是错误的，因为你永远无法知道另外一个选择是否是正确的。
+- [良好睡眠周期](https://yeshu.dev/notes/良好睡眠周期/): 只有在睡眠中意识才能休息，同时潜意识思维逐渐成熟，形成智慧。而无暇休息导致激动、愚钝、易怒，分不清主次。这既是疲劳的原因，也是疲劳的结果。——罗素《论幸福》
+- [压力山大到底是什么？](https://yeshu.dev/notes/压力山大到底是什么/): 一件事情很难，很多时候并不是它真的难，而是你认为它很难，你相信它很难，而且你为了印证自己的观点，跨越重重阻隔，尽最大努力地终于把它弄得很难。——张潇雨
 
 ## Projects
 
@@ -27,9 +110,6 @@ Primary identity:
 
 - [Sitemap](https://yeshu.dev/sitemap.xml): Search engine crawl map.
 - [Robots](https://yeshu.dev/robots.txt): Crawl access policy.
-- [Homepage JSON-LD](https://yeshu.dev/): Includes ProfilePage, Person, WebSite, and project ItemList structured data.
-
-## Optional
-
-- [Kyo product page](https://www.kyo.is/): Useful for understanding Yeshu's product taste and spatial interface direction.
-- [codeck product page](https://codeck.sh/): Useful for understanding Yeshu's Markdown-to-artifact workflow.
+- [Think JSON-LD](https://yeshu.dev/): Includes CollectionPage and BlogPosting structured data for public notes.
+- [Build JSON-LD / Chinese](https://yeshu.dev/build/): Includes ProfilePage, Person, WebSite, and project ItemList structured data.
+- [Build JSON-LD / English](https://yeshu.dev/en/build/): English mirror of the Build structured data.

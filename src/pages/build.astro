@@ -1,0 +1,27 @@
+---
+/**
+ * [INPUT]: 依赖 astro:content 读取 pages/build.md，依赖 JournalLayout 和 i18n 工具渲染中文 Build 项目索引
+ * [OUTPUT]: 对外提供 /build/ 中文项目索引路由与 CN/EN 常驻切换数据
+ * [POS]: pages 的中文 Build 入口，把中文 Markdown 项目真相源交给布局层呈现，英文镜像交给 /en/build/
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
+
+import { getCollection, render } from 'astro:content';
+import JournalLayout from '@/layouts/JournalLayout.astro';
+import { languageLinksForPath } from '@/lib/i18n.js';
+
+const entries = await getCollection('pages');
+const build = entries.find((entry) => entry.id === 'build.md' || entry.id === 'build');
+
+if (!build) {
+  throw new Error('Missing build markdown entry');
+}
+
+const { Content } = await render(build);
+const lang = 'zh';
+const languageLinks = languageLinksForPath(lang, { zh: '/build/', en: '/en/build/' });
+---
+
+<JournalLayout entry={build.data} lang={lang} languageLinks={languageLinks}>
+  <Content />
+</JournalLayout>

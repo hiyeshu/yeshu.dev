@@ -1,24 +1,47 @@
 ---
 /**
- * [INPUT]: 依赖 astro:content 读取 pages/home.md，依赖 JournalLayout 渲染页面结构
- * [OUTPUT]: 对外提供 yeshu.dev 首页路由
- * [POS]: pages 的首页入口，把 Markdown 真相源交给布局层呈现
+ * [INPUT]: 依赖 astro:content 读取 notes collection，依赖 NoteLayout 和 i18n 工具渲染中文 Think 目录页
+ * [OUTPUT]: 对外提供 yeshu.dev 根路由，默认进入中文 Think 页面并只列出中文 listed notes
+ * [POS]: pages 的中文首页入口，把公共思考索引作为站点默认表面，英文镜像交给 /en/
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 
-import { getCollection, render } from 'astro:content';
-import JournalLayout from '@/layouts/JournalLayout.astro';
+import { getCollection } from 'astro:content';
+import NoteLayout from '@/layouts/NoteLayout.astro';
+import { languageLinksForPath, notePath, notesForLang, uiText } from '@/lib/i18n.js';
 
-const entries = await getCollection('pages');
-const home = entries.find((entry) => entry.id === 'home.md' || entry.id === 'home');
-
-if (!home) {
-  throw new Error('Missing home markdown entry');
-}
-
-const { Content } = await render(home);
+const lang = 'zh';
+const ui = uiText[lang];
+const notes = notesForLang(await getCollection('notes'), lang);
+const languageLinks = languageLinksForPath(lang, { zh: '/', en: '/en/' });
 ---
 
-<JournalLayout entry={home.data}>
-  <Content />
-</JournalLayout>
+<NoteLayout
+  title={ui.siteTitle}
+  description={ui.siteDescription}
+  canonicalPath="/"
+  notes={notes}
+  lang={lang}
+  languageLinks={languageLinks}
+>
+  <article class="notes-ledger">
+    <header class="notes-ledger-header">
+      <p class="note-kicker">{ui.indexKicker}</p>
+      <h1>{ui.indexTitle}</h1>
+    </header>
+
+    <div class="note-list">
+      {notes.map((note) => (
+        <a class="note-list-item" href={notePath(note)}>
+          <time datetime={note.data.pubDate.toISOString()}>
+            {note.data.pubDate.toISOString().slice(0, 10)}
+          </time>
+          <span>
+            <strong>{note.data.title}</strong>
+            <em>{note.data.description}</em>
+          </span>
+        </a>
+      ))}
+    </div>
+  </article>
+</NoteLayout>

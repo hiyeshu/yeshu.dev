@@ -1,0 +1,55 @@
+---
+/**
+ * [INPUT]: 依赖 astro:content 的 notes collection、render，依赖 NoteLayout 和 i18n 工具渲染中文 Think note
+ * [OUTPUT]: 对外提供 /notes/[slug]/ 中文 Think 详情路由与 CN/EN 顶栏切换数据
+ * [POS]: pages/notes 的中文详情入口，把中文 Markdown 文件投射成 notion-reader 阅读页
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
+
+import { getCollection, render } from 'astro:content';
+import NoteLayout from '@/layouts/NoteLayout.astro';
+import { languageLinksForNote, notePath, noteSlug, notesForLang, uiText } from '@/lib/i18n.js';
+
+export async function getStaticPaths() {
+  const notes = (await getCollection('notes')).filter((note) => !note.data.draft);
+
+  return notes
+    .filter((note) => note.data.lang === 'zh')
+    .map((note) => ({
+      params: { slug: noteSlug(note) },
+      props: { note, notes }
+    }));
+}
+
+const lang = 'zh';
+const ui = uiText[lang];
+const { note, notes } = Astro.props;
+const { Content } = await render(note);
+const visibleNotes = notesForLang(notes, lang);
+const languageLinks = languageLinksForNote(note, notes);
+---
+
+<NoteLayout
+  title={`${note.data.title} | Yeshu Think`}
+  description={note.data.description}
+  canonicalPath={notePath(note)}
+  notes={visibleNotes}
+  currentId={note.id}
+  published={note.data.pubDate}
+  updated={note.data.updatedDate}
+  mode="post"
+  lang={lang}
+  languageLinks={languageLinks}
+>
+  <article class="note-article">
+    <p class="note-kicker">{ui.noteKicker}</p>
+    <h1>{note.data.title}</h1>
+    <p class="note-deck">{note.data.description}</p>
+    <time class="note-date" datetime={note.data.pubDate.toISOString()}>
+      {note.data.pubDate.toISOString().slice(0, 10)}
+    </time>
+    <div class="note-body">
+      <Content />
+    </div>
+  </article>
+</NoteLayout>

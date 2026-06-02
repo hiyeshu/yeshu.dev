@@ -1,0 +1,171 @@
+---
+/**
+ * [INPUT]: 依赖 notes collection 的 listed entry 数据、同集合 notes 列表、/favicon.svg 标识资产、全局 journal 样式、LoadingIntro 和 SensoryLayer
+ * [OUTPUT]: 对外提供 Think 列表页与单篇 note 的共用 HTML 骨架、首次会话载入封面、标题日期侧栏、顶栏语言切换、Think/Build 状态导航、元标签、JSON-LD 和 soft 交互音效
+ * [POS]: layouts 的 Think 发布骨架，让 post 侧栏承担桌面文章切换，语言切换固定在顶栏导航前，并配置首次进入反馈
+ * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+ */
+
+import '@/styles/global.css';
+import SensoryLayer from '@/components/SensoryLayer.jsx';
+import LoadingIntro from '@/components/LoadingIntro.jsx';
+import { buildPath, homePath, notePath, uiText } from '@/lib/i18n.js';
+
+const {
+  title,
+  description,
+  canonicalPath,
+  notes = [],
+  currentId,
+  published,
+  updated,
+  mode = 'index',
+  lang = 'zh',
+  languageLinks = []
+} = Astro.props;
+
+const siteUrl = 'https://yeshu.dev';
+const ui = uiText[lang];
+const htmlLang = ui.htmlLang;
+const canonicalUrl = new URL(canonicalPath, siteUrl).toString();
+const faviconUrl = new URL('/favicon.svg', siteUrl).toString();
+const llmsUrl = new URL('/llms.txt', siteUrl).toString();
+const sortedNotes = [...notes].sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const dateFormatter = new Intl.DateTimeFormat('en', {
+  year: 'numeric',
+  month: 'short',
+  day: '2-digit'
+});
+const pageType = mode === 'post' ? 'BlogPosting' : 'CollectionPage';
+const structuredData = mode === 'post'
+  ? {
+      '@context': 'https://schema.org',
+      '@type': pageType,
+      headline: title,
+      description,
+      url: canonicalUrl,
+      datePublished: published?.toISOString(),
+      dateModified: (updated ?? published)?.toISOString(),
+      author: {
+        '@type': 'Person',
+        name: 'Yeshu',
+        url: siteUrl
+      },
+      publisher: {
+        '@type': 'Person',
+        name: 'Yeshu',
+        url: siteUrl
+      }
+    }
+  : {
+      '@context': 'https://schema.org',
+      '@type': pageType,
+      name: title,
+      description,
+      url: canonicalUrl,
+      hasPart: sortedNotes.map((note) => ({
+        '@type': 'BlogPosting',
+        headline: note.data.title,
+        description: note.data.description,
+        url: new URL(notePath(note), siteUrl).toString(),
+        datePublished: note.data.pubDate.toISOString()
+      }))
+    };
+---
+
+<!doctype html>
+<html lang={htmlLang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="author" content="Yeshu" />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta name="generator" content="Astro" />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="alternate" type="text/markdown" href={llmsUrl} title="LLM context for yeshu.dev" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta property="og:type" content={mode === 'post' ? 'article' : 'website'} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={faviconUrl} />
+    <meta property="og:site_name" content="Yeshu" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={faviconUrl} />
+    <script is:inline>
+      try {
+        if (window.sessionStorage.getItem('yeshu.loading-intro.seen') === '1') {
+          document.documentElement.classList.add('loading-intro-seen');
+        }
+      } catch {}
+    </script>
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <SensoryLayer client:load />
+    <LoadingIntro client:load />
+    <div class:list={['journal-wrapper', 'notes-wrapper', mode === 'post' && 'notion-reader']}>
+      <div class="marginalia-left">ANNEX DOC NO. YESHU-THINK | THINK LOG</div>
+
+      <header class:list={['journal-header', languageLinks.length > 1 && 'has-language-switch']}>
+        <a class="journal-title" href={homePath(lang)} aria-label="Yeshu Think">
+          <img src="/favicon.svg" alt="" />
+        </a>
+        <div class="header-actions">
+          {languageLinks.length > 1 && (
+            <nav class="language-switch header-language-switch" aria-label="Language versions">
+              {languageLinks.map((link) => (
+                <a href={link.href} aria-current={link.active ? 'page' : undefined}>{link.label}</a>
+              ))}
+            </nav>
+          )}
+          <a class="meta-datum meta-link nav-think" href={homePath(lang)} aria-current="page" data-nav-label={ui.navThink}>
+            <span class="meta-label">{ui.notesLabel}</span>
+            <span>{ui.notesLabel}</span>
+          </a>
+          <a class="meta-datum meta-link nav-build" href={buildPath(lang)} data-nav-label={ui.navBuild}>
+            <span class="meta-label">{ui.projectsLabel}</span>
+            <span>{ui.projectsLabel}</span>
+          </a>
+        </div>
+      </header>
+
+      <main class:list={['notes-main', mode === 'index' && 'notes-main-index']}>
+        {mode === 'post' && (
+          <aside class="panel notes-sidebar" aria-label="Think directory">
+            <nav class="notes-directory" aria-label="Think directory">
+              {sortedNotes.map((note) => (
+                <a
+                  class:list={['notes-directory-link', currentId === note.id && 'active']}
+                  href={notePath(note)}
+                  aria-current={currentId === note.id ? 'page' : undefined}
+                >
+                  <span>{note.data.title}</span>
+                  <time datetime={note.data.pubDate.toISOString()}>{dateFormatter.format(note.data.pubDate)}</time>
+                </a>
+              ))}
+            </nav>
+          </aside>
+        )}
+
+        <section class="panel notes-surface" id="content">
+          <slot />
+        </section>
+      </main>
+    </div>
+    <script is:inline>
+      document.querySelectorAll('.note-body a[href]').forEach((link) => {
+        const href = link.getAttribute('href') || '';
+        const isLocal = href.startsWith('/') || href.startsWith('#') || href.startsWith('mailto:');
+        if (!isLocal) {
+          link.setAttribute('target', '_blank');
+          link.setAttribute('rel', 'noopener noreferrer');
+        }
+      });
+    </script>
+  </body>
+</html>
