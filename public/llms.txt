@@ -11,6 +11,8 @@ Primary identity:
 - Alias: hiyeshu
 - Role: Indie Developer · Designer
 - Mode: Design × Code
+- Birth date: 1996-02-05
+- Age: compute from Birth date; the Build page also exposes JSON-LD Person.birthDate.
 - GitHub: https://github.com/hiyeshu
 - X: https://x.com/hiyeshu
 - Email: okyeshu@gmail.com

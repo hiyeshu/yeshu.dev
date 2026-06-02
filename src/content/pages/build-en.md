@@ -20,6 +20,7 @@ identity:
   alternateNames:
     - "hiyeshu"
   description: "Yeshu is an independent builder focused on AI products, agent workflows, Markdown-first publishing, and small software systems."
+  birthDate: "1996-02-05"
   sameAs:
     - "https://github.com/hiyeshu"
     - "https://x.com/hiyeshu"
@@ -34,36 +35,33 @@ eyebrow: "ANNEX DOC NO. YESHU-001 | PERSONAL SYSTEMS LAB"
 volume: "01.A"
 dateLabel: "MAY 2026"
 doi: "yeshu.dev/build"
-abstractTitle: "Profile. 01"
-links:
-  - label: "GitHub"
-    href: "https://github.com/hiyeshu"
-  - label: "Email"
-    href: "mailto:okyeshu@gmail.com"
-  - label: "X"
-    href: "https://x.com/hiyeshu"
+abstractTitle: "YESHU.DEV"
+links: []
 controls:
   - label: "Mode"
     value: "Design × Code"
   - label: "WeChat"
     value: "HIYESHU"
+    copy: "HIYESHU"
   - label: "Email"
     value: "okyeshu@gmail.com"
+    copy: "okyeshu@gmail.com"
   - label: "X"
     value: "@hiyeshu"
+    href: "https://x.com/hiyeshu"
 projects:
   - id: "github"
     figure: "FIG. 1A"
     name: "hiyeshu / GitHub"
-    kind: "Public code index"
+    kind: "Code index"
     href: "https://github.com/hiyeshu"
     visual:
       type: "image"
       value: "/marks/github.svg"
       label: "GitHub mark"
-    status: "9 public repositories"
-    description: "The public code surface: experiments, product scaffolds, and agent-facing tools collected under one identity."
-    signal: "Use this as the canonical directory for source repositories."
+    status: "Public repositories"
+    description: "Experiments, product scaffolds, and agent tools under one identity."
+    signal: "Canonical source directory."
     metrics:
       - label: "Profile"
         value: "Yeshu"
@@ -74,15 +72,15 @@ projects:
   - id: "kyo"
     figure: "FIG. 1B"
     name: "Kyo"
-    kind: "Spatial bookmark manager and AI OS"
+    kind: "Spatial AI OS"
     href: "https://www.kyo.is/"
     visual:
       type: "image"
       value: "/marks/kyo.svg"
       label: "Kyo app icon"
-    status: "Active product surface"
-    description: "A spatial bookmark manager and AI OS, presented as a product node rather than a plain link."
-    signal: "Good for showing product taste, interface direction, and operating-system thinking."
+    status: "Product surface"
+    description: "A spatial bookmark manager shaped as a product node, not a plain link."
+    signal: "Taste, interface direction, and AI OS thinking."
     metrics:
       - label: "Domain"
         value: "kyo.is"
@@ -93,16 +91,16 @@ projects:
   - id: "codeck"
     figure: "FIG. 2"
     name: "codeck"
-    kind: "AI presentation tool"
+    kind: "AI deck tool"
     href: "https://codeck.sh/"
     source: "https://github.com/hiyeshu/codeck"
     visual:
       type: "image"
       value: "/marks/codeck.svg"
       label: "codeck mark"
-    status: "Conversation to presentation"
-    description: "Turns notes, docs, and data into polished HTML presentations through AI conversation."
-    signal: "Shows the markdown-to-artifact workflow: source material in, finished deck out."
+    status: "Deck builder"
+    description: "Turns notes, docs, and data into polished HTML presentations."
+    signal: "Source in, deck out."
     metrics:
       - label: "Install"
         value: "npx skills add"
@@ -113,15 +111,15 @@ projects:
   - id: "trip-map-builder"
     figure: "FIG. 3"
     name: "trip-map-builder"
-    kind: "Agent skill"
+    kind: "Travel map agent"
     href: "https://github.com/hiyeshu/trip-map-builder"
     visual:
       type: "text"
       value: "MAP"
       label: "trip-map-builder field mark"
-    status: "Trip planning pipeline"
-    description: "A travel planning skill: plan, research on Xiaohongshu, then generate an interactive map page."
-    signal: "Use it to expose agent workflow depth instead of just listing another repository."
+    status: "Trip planning"
+    description: "Plans a trip, researches Xiaohongshu, then renders an interactive map."
+    signal: "Agent workflow as a usable artifact."
     metrics:
       - label: "Input"
         value: "travel intent"
@@ -131,12 +129,4 @@ projects:
         value: "map"
 ---
 
-AI coder by night. I love simplifying the complex and beautifying the simple. From Ganzhou, cat lover, fueled by coffee.
-
-**Yeshu**  
-Indie Developer · Designer
-
-Design × Code  
-WECHAT HIYESHU  
-EMAIL okyeshu@gmail.com  
-X @hiyeshu
+AI coder by night. I build small, useful systems at the edge of design and code: agent workflows, AI products, and quiet tools that make messy ideas easier to use. I love simplifying the complex and beautifying the simple. From Ganzhou, cat lover, fueled by coffee.

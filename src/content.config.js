@@ -1,7 +1,7 @@
 /**
  * [INPUT]: 依赖 astro:content 的 defineCollection、z
- * [OUTPUT]: 对外提供 pages 与 notes 内容集合 schema，包含 GEO 元数据、身份数据、项目 visual 契约、路径稳定 notes id、笔记文章契约和 i18n slug 字段
- * [POS]: src 的内容契约层，让 Markdown frontmatter 成为可校验的数据源、图版视觉索引、机器可读身份源和 notes 双语发布源，且把公开 slug 与内部 id 解耦
+ * [OUTPUT]: 对外提供 pages 与 notes 内容集合 schema，包含 GEO 元数据、身份数据、生日真相源、可操作 contact 控制行、项目 visual 契约、路径稳定 notes id、笔记文章契约和 i18n slug 字段
+ * [POS]: src 的内容契约层，让 Markdown frontmatter 成为可校验的数据源、可点击或复制的身份信号、可计算年龄的机器身份源、图版视觉索引和 notes 双语发布源，且把公开 slug 与内部 id 解耦
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 
@@ -24,6 +24,7 @@ const identitySchema = z.object({
   name: z.string(),
   alternateNames: z.array(z.string()).default([]),
   description: z.string(),
+  birthDate: z.string().optional(),
   sameAs: z.array(z.string().url()).default([]),
   knowsAbout: z.array(z.string()).default([])
 });
@@ -68,7 +69,9 @@ const pages = defineCollection({
     links: z.array(linkSchema),
     controls: z.array(z.object({
       label: z.string(),
-      value: z.string()
+      value: z.string(),
+      href: z.string().url().optional(),
+      copy: z.string().optional()
     })),
     projects: z.array(projectSchema)
   })

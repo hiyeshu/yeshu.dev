@@ -20,6 +20,7 @@ identity:
   alternateNames:
     - "hiyeshu"
   description: "Yeshu 是一个独立 builder，关注 AI 产品、agent 工作流、Markdown 优先发布和小型软件系统。"
+  birthDate: "1996-02-05"
   sameAs:
     - "https://github.com/hiyeshu"
     - "https://x.com/hiyeshu"
@@ -34,36 +35,33 @@ eyebrow: "ANNEX DOC NO. YESHU-001 | PERSONAL SYSTEMS LAB"
 volume: "01.A"
 dateLabel: "MAY 2026"
 doi: "yeshu.dev/build"
-abstractTitle: "Profile. 01"
-links:
-  - label: "GitHub"
-    href: "https://github.com/hiyeshu"
-  - label: "Email"
-    href: "mailto:okyeshu@gmail.com"
-  - label: "X"
-    href: "https://x.com/hiyeshu"
+abstractTitle: "YESHU.DEV"
+links: []
 controls:
   - label: "Mode"
     value: "Design × Code"
   - label: "WeChat"
     value: "HIYESHU"
+    copy: "HIYESHU"
   - label: "Email"
     value: "okyeshu@gmail.com"
+    copy: "okyeshu@gmail.com"
   - label: "X"
     value: "@hiyeshu"
+    href: "https://x.com/hiyeshu"
 projects:
   - id: "github"
     figure: "FIG. 1A"
     name: "hiyeshu / GitHub"
-    kind: "公开代码索引"
+    kind: "代码索引"
     href: "https://github.com/hiyeshu"
     visual:
       type: "image"
       value: "/marks/github.svg"
       label: "GitHub 标识"
-    status: "9 个公开仓库"
-    description: "公开代码表面：实验、产品脚手架和面向 agent 的工具，被收拢在同一个身份下。"
-    signal: "把这里作为源码仓库的规范目录。"
+    status: "公开仓库"
+    description: "实验、产品脚手架和 agent 工具，收拢在同一个身份下。"
+    signal: "源码仓库的规范目录。"
     metrics:
       - label: "身份"
         value: "Yeshu"
@@ -74,15 +72,15 @@ projects:
   - id: "kyo"
     figure: "FIG. 1B"
     name: "Kyo"
-    kind: "空间书签管理器和 AI OS"
+    kind: "空间 AI OS"
     href: "https://www.kyo.is/"
     visual:
       type: "image"
       value: "/marks/kyo.svg"
       label: "Kyo 应用图标"
-    status: "活跃产品表面"
-    description: "一个空间书签管理器和 AI OS，被呈现为产品节点，而不是普通链接。"
-    signal: "适合展示产品品味、界面方向和操作系统式思考。"
+    status: "产品表面"
+    description: "空间书签管理器，被呈现为产品节点，而不是普通链接。"
+    signal: "展示产品品味、界面方向和 AI OS 思考。"
     metrics:
       - label: "域名"
         value: "kyo.is"
@@ -93,16 +91,16 @@ projects:
   - id: "codeck"
     figure: "FIG. 2"
     name: "codeck"
-    kind: "AI 演示工具"
+    kind: "AI Deck 工具"
     href: "https://codeck.sh/"
     source: "https://github.com/hiyeshu/codeck"
     visual:
       type: "image"
       value: "/marks/codeck.svg"
       label: "codeck 标识"
-    status: "从对话到演示"
-    description: "通过 AI 对话，把笔记、文档和数据变成精修的 HTML 演示。"
-    signal: "展示 markdown 到 artifact 的工作流：素材进入，成品 deck 输出。"
+    status: "演示生成器"
+    description: "通过 AI 对话，把笔记、文档和数据变成精修 HTML 演示。"
+    signal: "素材进入，deck 输出。"
     metrics:
       - label: "安装"
         value: "npx skills add"
@@ -113,15 +111,15 @@ projects:
   - id: "trip-map-builder"
     figure: "FIG. 3"
     name: "trip-map-builder"
-    kind: "Agent skill"
+    kind: "旅行地图 Agent"
     href: "https://github.com/hiyeshu/trip-map-builder"
     visual:
       type: "text"
       value: "MAP"
       label: "trip-map-builder field 标识"
-    status: "旅行规划管线"
-    description: "一个旅行规划 skill：先规划，在小红书做研究，再生成交互式地图页面。"
-    signal: "用它展示 agent 工作流深度，而不是只列出另一个仓库。"
+    status: "旅行规划"
+    description: "先规划，再研究小红书，最后生成交互式地图。"
+    signal: "把 agent 工作流变成可用成品。"
     metrics:
       - label: "输入"
         value: "旅行意图"
@@ -131,12 +129,4 @@ projects:
         value: "地图"
 ---
 
-AI coder by night. I love simplifying the complex and beautifying the simple. From Ganzhou, cat lover, fueled by coffee.
-
-**Yeshu**  
-Indie Developer · Designer
-
-Design × Code  
-WECHAT HIYESHU  
-EMAIL okyeshu@gmail.com  
-X @hiyeshu
+AI coder by night. I build small, useful systems at the edge of design and code: agent workflows, AI products, and quiet tools that make messy ideas easier to use. I love simplifying the complex and beautifying the simple. From Ganzhou, cat lover, fueled by coffee.

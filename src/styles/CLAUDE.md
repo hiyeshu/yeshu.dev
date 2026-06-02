@@ -2,7 +2,7 @@
 > L2 | 父级: ../CLAUDE.md
 
 成员清单
-global.css: CSS 站点全局视觉系统，聚合 Tailwind/shadcn token 并实现固定期刊外框、统一当前项标记、ASCII 项目图版、Build profile 摘要、通用载入封面、notes 阅读版式、标题日期侧栏和顶栏 CN/EN 语言开关。
+global.css: CSS 站点全局视觉系统，聚合 Tailwind/shadcn token 并实现固定期刊外框、统一当前项标记、ASCII 项目图版、Build profile 摘要、contact 行、通用载入封面、notes 阅读版式、note hover 点阵纹理、标题日期侧栏和顶栏 CN/EN 语言开关。
 
 法则: 视觉集中·类名稳定·页面不内联大块样式
 

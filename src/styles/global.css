@@ -1,7 +1,7 @@
 /*
  * [INPUT]: 依赖 src/index.css 的 Tailwind/shadcn token，依赖 JournalLayout、NoteLayout、FieldFigure 和 ASCIIIcon 的 class 结构
- * [OUTPUT]: 对外提供 yeshu.dev 的 journal annex 视觉系统、固定外框、Think/Build 状态导航、ASCII 项目图标场、通用载入封面、notes 阅读版式、标题日期侧栏和 CN/EN 语言开关
- * [POS]: styles 的站点样式层，复刻参考 HTML 的黑白边框、固定期刊框架、统一当前项标记、通用载入解密封面、ASCII 图版气质、Markdown notes 排版和双语切换控件
+ * [OUTPUT]: 对外提供 yeshu.dev 的 journal annex 视觉系统、固定外框、Think/Build 状态导航、ASCII 项目图标场、Build profile contact 行、通用载入封面、notes 阅读版式、note hover 点阵纹理、标题日期侧栏和 CN/EN 语言开关
+ * [POS]: styles 的站点样式层，复刻参考 HTML 的黑白边框、固定期刊框架、统一当前项标记、Build 身份名片、通用载入解密封面、ASCII 图版气质、Markdown notes 排版、列表纹理反馈和双语切换控件
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 
@@ -110,7 +110,9 @@ a {
   width: clamp(1.75rem, 3.5vw, 3.5rem);
   height: clamp(1.75rem, 3.5vw, 3.5rem);
   align-items: center;
+  justify-self: start;
   justify-content: center;
+  margin-left: clamp(0.45rem, 1.2vw, 1rem);
   overflow: hidden;
 }
 
@@ -224,10 +226,18 @@ a {
   flex-direction: column;
 }
 
-.abstract h1 {
+.abstract-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
   margin: 0 0 1rem;
   border-bottom: var(--hairline);
   padding-bottom: 0.5rem;
+}
+
+.abstract h1 {
+  margin: 0;
   font-size: 0.85rem;
   font-weight: 800;
   text-transform: uppercase;
@@ -240,6 +250,15 @@ a {
   line-height: 1.62;
   text-align: left;
   hyphens: none;
+}
+
+.abstract p:first-of-type::first-letter {
+  float: left;
+  padding-right: 0.45rem;
+  color: var(--reader-ink);
+  font-size: 3.1rem;
+  font-weight: 900;
+  line-height: 0.82;
 }
 
 .abstract strong {
@@ -260,23 +279,43 @@ a {
 .link-bank a {
   position: relative;
   display: flex;
+  width: 100%;
   justify-content: space-between;
   gap: 1rem;
+  border: 0;
   border-bottom: 1px dotted rgba(0, 0, 0, 0.24);
   padding: 0.55rem 0;
+  background: transparent;
+  color: inherit;
   font-family: var(--font-mono), "Space Mono", monospace;
   font-size: 0.7rem;
+  text-align: left;
+  text-decoration: none;
   text-transform: uppercase;
+}
+
+.control-row:is(a, button) {
+  cursor: pointer;
 }
 
 .control-row strong {
   text-align: right;
 }
 
+.control-row:is(a, button):hover,
+.control-row:is(a, button):focus-visible,
 .link-bank a:hover {
   background: #000000;
   color: #ffffff;
+  outline: 0;
   box-shadow: none;
+}
+
+.control-row[data-copy-state="copied"] strong::after {
+  content: " copied";
+  font-size: 0.62rem;
+  font-weight: 400;
+  opacity: 0.72;
 }
 
 .figures-arena {
@@ -308,21 +347,6 @@ a {
   overflow: hidden;
 }
 
-.data-readout {
-  position: absolute;
-  top: 0.75rem;
-  left: 0.75rem;
-  z-index: 2;
-  font-family: var(--font-mono), "Space Mono", monospace;
-  font-size: 0.65rem;
-  pointer-events: none;
-  text-transform: uppercase;
-}
-
-.readout-line {
-  display: block;
-}
-
 .field-visual {
   position: relative;
   min-height: 100%;
@@ -337,7 +361,7 @@ a {
 
 .ascii-icon-surface {
   position: absolute;
-  inset: 2.35rem -0.35rem -0.35rem;
+  inset: 0.75rem -0.35rem -0.35rem;
   overflow: hidden;
   opacity: 0.86;
   transition:
@@ -381,70 +405,46 @@ a {
   min-width: 0;
   margin-left: -1px;
   border-left: var(--hairline);
-  padding: 4.5rem 1.4rem 1.4rem;
+  padding: clamp(2rem, 4cqw, 3.75rem);
   background: #ffffff;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   overflow: hidden;
-}
-
-.project-kind {
-  margin: 0 0 0.65rem;
-  font-family: var(--font-mono), "Space Mono", monospace;
-  font-size: 0.7rem;
-  text-transform: uppercase;
 }
 
 .project-copy h2 {
   margin: 0;
-  font-size: clamp(2rem, 5.6cqw, 4.75rem);
+  max-width: 11ch;
+  font-size: clamp(2.15rem, 5.1cqw, 4.45rem);
   font-weight: 900;
-  line-height: 0.9;
+  line-height: 0.92;
   letter-spacing: 0;
   text-transform: uppercase;
   overflow-wrap: anywhere;
 }
 
 .project-copy p {
-  max-width: 44rem;
-  margin: 0.85rem 0 0;
-  font-size: 0.85rem;
+  max-width: 34rem;
+  margin: 1.15rem 0 0;
+  color: var(--reader-text);
+  font-size: clamp(0.98rem, 1.25cqw, 1.13rem);
+  line-height: 1.62;
 }
 
-.project-signal {
-  color: var(--journal-muted);
-  font-family: var(--font-mono), "Space Mono", monospace;
+.project-copy .project-kind {
+  max-width: 22rem;
+  margin: 0 0 0.7rem;
+  color: var(--reader-muted);
+  font-size: clamp(0.82rem, 0.95cqw, 0.95rem);
+  line-height: 1.35;
 }
 
-.figure-caption {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 1rem;
-  align-items: start;
-  border-top: var(--hairline);
-  padding: 0.75rem;
-}
-
-.fig-number {
-  font-family: var(--font-mono), "Space Mono", monospace;
-  font-size: 0.85rem;
-  font-weight: 800;
-}
-
-.metric-strip {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.5rem;
-  font-family: var(--font-mono), "Space Mono", monospace;
-  font-size: 0.68rem;
-  text-transform: uppercase;
-}
-
-.metric-strip span {
-  display: flex;
-  justify-content: space-between;
-  gap: 0.5rem;
-  border-bottom: 1px dotted rgba(0, 0, 0, 0.24);
+.project-copy .project-signal {
+  max-width: 28rem;
+  margin-top: 0.9rem;
+  color: var(--reader-muted);
+  font-size: clamp(0.88rem, 1.05cqw, 0.98rem);
+  line-height: 1.55;
 }
 
 .notes-main {
@@ -731,28 +731,54 @@ a {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   padding: 1rem 0;
   color: var(--reader-text);
+  overflow: hidden;
   transition:
     background-color 160ms ease,
     color 160ms ease;
 }
 
+.note-list-item::before {
+  content: "";
+  position: absolute;
+  inset: 0 -1rem;
+  z-index: 0;
+  background:
+    radial-gradient(circle at center, rgba(0, 0, 0, 0.045) 0 1px, transparent 1.2px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.022) 1px, transparent 1px),
+    linear-gradient(rgba(0, 0, 0, 0.022) 1px, transparent 1px),
+    #fbfbfb;
+  background-size: 12px 12px, 24px 24px, 24px 24px, auto;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 180ms ease;
+}
+
 .note-list-item:hover,
 .note-list-item:focus-visible {
-  background: var(--reader-wash);
   color: var(--reader-ink);
   box-shadow: none;
   outline: 0;
 }
 
+.note-list-item:hover::before,
+.note-list-item:focus-visible::before {
+  opacity: 1;
+}
+
 .note-list-item time {
+  position: relative;
+  z-index: 1;
   color: var(--reader-faint);
   font-family: var(--font-mono), "Space Mono", monospace;
   font-size: clamp(0.76rem, 0.9vw, 0.86rem);
   font-weight: 500;
   line-height: 1.35;
+  transition: color 160ms ease;
 }
 
 .note-list-item span {
+  position: relative;
+  z-index: 1;
   display: grid;
   gap: 0.55rem;
   max-width: 64rem;
@@ -764,6 +790,7 @@ a {
   font-weight: 820;
   line-height: 1.2;
   text-transform: none;
+  transition: color 160ms ease;
 }
 
 .note-list-item em {
@@ -772,6 +799,16 @@ a {
   font-size: clamp(0.98rem, 1.25vw, 1.12rem);
   font-style: normal;
   line-height: 1.62;
+}
+
+.note-list-item:hover time,
+.note-list-item:focus-visible time {
+  color: var(--reader-muted);
+}
+
+.note-list-item:hover strong,
+.note-list-item:focus-visible strong {
+  color: var(--journal-ink);
 }
 
 .note-body {
@@ -1019,7 +1056,8 @@ a {
   }
 
   .journal-wrapper {
-    height: 100dvh;
+    min-height: 100dvh;
+    height: auto;
     border-left: 0;
     border-right: 0;
   }
@@ -1027,6 +1065,11 @@ a {
   .journal-main,
   .notes-main {
     grid-template-columns: 1fr;
+  }
+
+  .journal-main {
+    flex: none;
+    overflow: visible;
   }
 
   .marginalia-left {
@@ -1166,10 +1209,6 @@ a {
 
   .ascii-icon-surface {
     inset: 2.6rem -0.15rem -0.15rem;
-  }
-
-  .metric-strip {
-    grid-template-columns: 1fr;
   }
 
   .notes-surface {

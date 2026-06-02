@@ -1,8 +1,8 @@
 ---
 /**
- * [INPUT]: 依赖 content/pages/build*.md 的 frontmatter 数据、GEO 身份数据、/favicon.svg 标识资产、i18n 路由工具，依赖 GlobalStyles、FieldFigure 和 SensoryLayer 组件
- * [OUTPUT]: 对外提供 journal annex 风格的双语 Build 页面布局、常驻 CN/EN 语言切换、Think/Build 状态导航、元标签、JSON-LD 结构化数据和 soft 交互音效
- * [POS]: layouts 的 Build 页面骨架，将 Markdown 数据、机器可读身份、顶栏图标、语言状态和感官反馈投射成可浏览的项目索引
+ * [INPUT]: 依赖 content/pages/build*.md 的 frontmatter 数据、GEO 身份数据、birthDate、可操作 contact 控制行、/favicon.svg 标识资产、i18n 路由工具，依赖 GlobalStyles、FieldFigure 和 SensoryLayer 组件
+ * [OUTPUT]: 对外提供 journal annex 风格的双语 Build 页面布局、常驻 CN/EN 语言切换、Think/Build 状态导航、contact 复制/外链交互、元标签、JSON-LD 结构化数据和 soft 交互音效
+ * [POS]: layouts 的 Build 页面骨架，将 Markdown 数据、机器可读身份、生日真相源、顶栏图标、语言状态、contact 行为和感官反馈投射成可浏览的项目索引
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 
@@ -59,6 +59,7 @@ const structuredData = {
       url: canonicalUrl,
       image: faviconUrl,
       description: entry.identity.description,
+      birthDate: entry.identity.birthDate,
       sameAs: entry.identity.sameAs,
       knowsAbout: entry.identity.knowsAbout,
       mainEntityOfPage: { '@id': profileId }
@@ -145,27 +146,43 @@ const structuredData = {
       <main class="journal-main">
         <aside class="panel sidebar">
           <section class="abstract">
-            <h1>{entry.abstractTitle}</h1>
+            <header class="abstract-heading">
+              <h1>{entry.abstractTitle}</h1>
+            </header>
             <slot />
           </section>
 
           <section class="control-bank" aria-label="Site signals">
             {entry.controls.map((control) => (
-              <div class="control-row">
-                <span>{control.label}</span>
-                <strong>{control.value}</strong>
-              </div>
+              control.href ? (
+                <a class="control-row" href={control.href} target="_blank" rel="noreferrer" aria-label={`Open ${control.label}`}>
+                  <span>{control.label}</span>
+                  <strong>{control.value}</strong>
+                </a>
+              ) : control.copy ? (
+                <button class="control-row" type="button" data-copy-value={control.copy} aria-label={`Copy ${control.label}`}>
+                  <span>{control.label}</span>
+                  <strong>{control.value}</strong>
+                </button>
+              ) : (
+                <div class="control-row">
+                  <span>{control.label}</span>
+                  <strong>{control.value}</strong>
+                </div>
+              )
             ))}
           </section>
 
-          <nav class="link-bank" aria-label="External links">
-            {entry.links.map((link) => (
-              <a href={link.href} target="_blank" rel="noreferrer">
-                <span>{link.label}</span>
-                <span>{externalActionLabel}</span>
-              </a>
-            ))}
-          </nav>
+          {entry.links.length > 0 && (
+            <nav class="link-bank" aria-label="External links">
+              {entry.links.map((link) => (
+                <a href={link.href} target="_blank" rel="noreferrer">
+                  <span>{link.label}</span>
+                  <span>{externalActionLabel}</span>
+                </a>
+              ))}
+            </nav>
+          )}
         </aside>
 
         <section class="figures-arena" id="projects" aria-label="Project figures">
@@ -178,5 +195,38 @@ const structuredData = {
         </section>
       </main>
     </div>
+    <script is:inline>
+      const copyValue = async (value) => {
+        try {
+          await navigator.clipboard.writeText(value);
+          return true;
+        } catch {
+          const textarea = document.createElement('textarea');
+          textarea.value = value;
+          textarea.setAttribute('readonly', '');
+          textarea.style.position = 'fixed';
+          textarea.style.opacity = '0';
+          document.body.append(textarea);
+          textarea.select();
+          const copied = document.execCommand('copy');
+          textarea.remove();
+          return copied;
+        }
+      };
+
+      document.querySelectorAll('[data-copy-value]').forEach((button) => {
+        button.addEventListener('click', async () => {
+          const value = button.dataset.copyValue;
+          if (!value) return;
+          const copied = await copyValue(value);
+          if (!copied) return;
+          button.dataset.copyState = 'copied';
+          window.clearTimeout(button.copyStateTimer);
+          button.copyStateTimer = window.setTimeout(() => {
+            delete button.dataset.copyState;
+          }, 1200);
+        });
+      });
+    </script>
   </body>
 </html>
