@@ -1,12 +1,24 @@
 {
-  "translatedAt": "2026-06-02T14:39:51.239Z",
-  "count": 37,
+  "translatedAt": "2026-06-06T15:49:25.102Z",
+  "count": 39,
   "notes": [
     {
       "sourceSlug": "2022年问自己",
       "file": "2022年问自己-en.md",
       "title": "\"Ask yourself\" in 2022",
       "routeSlug": "ask-yourself-in-2022"
+    },
+    {
+      "sourceSlug": "context-window-is-empty-land",
+      "file": "context-window-is-empty-land-en.md",
+      "title": "Context Window Is Empty Land",
+      "routeSlug": "context-window-is-empty-land"
+    },
+    {
+      "sourceSlug": "html-is-new-world-jpg",
+      "file": "html-is-new-world-jpg-en.md",
+      "title": "HTML Is the New World's JPG",
+      "routeSlug": "html-is-new-world-jpg"
     },
     {
       "sourceSlug": "not-all-problems-need-solving",

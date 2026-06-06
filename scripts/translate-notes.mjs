@@ -165,6 +165,13 @@ function noteRoute(note) {
   return note.data.lang === 'en' ? `/en/notes/${slug}/` : `/notes/${slug}/`;
 }
 
+function noteOrigin(note) {
+  if (note.data.generatedTranslation) return '机器翻译自中文源';
+  if (note.data.notionUrl?.includes('app.notion.com/p/')) return '同步自 Notion 页面并本地整理';
+  if (note.data.notionId) return '同步自 Notion Thinking 数据库';
+  return '本地手写内容';
+}
+
 function writeIndexes(notes) {
   const publicNotes = notes
     .filter((note) => !note.data.draft && note.data.listed !== false)
@@ -175,7 +182,7 @@ function writeIndexes(notes) {
     '> L2 | 父级: ../CLAUDE.md',
     '',
     '成员清单',
-    ...publicNotes.map((note) => `${note.file}: Think ${note.data.lang === 'en' ? '英文' : '中文'}文章，${note.data.generatedTranslation ? '机器翻译自中文源' : note.data.notionId ? '同步自 Notion Thinking 数据库' : '本地手写内容'}，标题《${note.data.title}》。`),
+    ...publicNotes.map((note) => `${note.file}: Think ${note.data.lang === 'en' ? '英文' : '中文'}文章，${noteOrigin(note)}，标题《${note.data.title}》。`),
     'notion-sync-manifest.json: Notion Thinking 同步清单，记录最近一次同步时间、数量和生成 slug。',
     'translation-sync-manifest.json: 英文翻译同步清单，记录最近一次翻译时间、数量和生成 slug。',
     '',
@@ -189,16 +196,17 @@ function writeIndexes(notes) {
   const sitemapEntries = [
     ['/', '2026-06-02', 'weekly', '1.0'],
     ['/en/', '2026-06-02', 'weekly', '1.0'],
-    ['/build/', '2026-05-31', 'weekly', '0.8'],
+    ['/build/', '2026-06-02', 'weekly', '0.8'],
+    ['/en/build/', '2026-06-02', 'weekly', '0.8'],
     ...publicNotes.map((note) => [noteRoute(note), String(note.data.pubDate).slice(0, 10), 'monthly', '0.7'])
   ];
 
   const sitemap = [
     '<?xml version="1.0" encoding="UTF-8"?>',
     '<!--',
-    '  [INPUT]: 依赖 yeshu.dev 公开 URL、Think 中英首页、Build 页面和 notes 中英公开路由',
+    '  [INPUT]: 依赖 yeshu.dev 公开 URL、Think 中英首页、Build 中英页面和 notes 中英公开路由',
     '  [OUTPUT]: 对外提供搜索引擎可读取的站点地图',
-    '  [POS]: public 的索引入口文件，帮助爬虫发现 Think 首页、Build 索引与 Markdown notes 文章',
+    '  [POS]: public 的索引入口文件，帮助爬虫发现 Think 首页、Build 双语索引与 Markdown notes 文章',
     '  [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md',
     '-->',
     '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
@@ -226,7 +234,7 @@ function writeIndexes(notes) {
 
   const llms = `# Yeshu
 
-> Yeshu is an independent builder focused on AI products, agent workflows, Markdown-first publishing, and small public software systems.
+> AI coder by night. I love simplifying the complex and beautifying the simple. From Ganzhou, cat lover, fueled by coffee.
 
 yeshu.dev is a bilingual personal field index with two public surfaces: Think for ideas and Build for shipped work. It exists to help people and AI agents identify the same entity, projects, public code surface, and writing without inferring from scattered links.
 
@@ -235,14 +243,22 @@ Canonical URL: ${siteUrl}/
 Primary identity:
 - Name: Yeshu
 - Alias: hiyeshu
+- Role: Indie Developer · Designer
+- Mode: Design × Code
+- Birth date: 1996-02-05
+- Age: compute from Birth date; the Build page also exposes JSON-LD Person.birthDate.
 - GitHub: https://github.com/hiyeshu
+- X: https://x.com/hiyeshu
+- Email: okyeshu@gmail.com
+- WeChat: HIYESHU
 - Focus: AI products, agent workflows, spatial interfaces, Markdown-first content systems, presentation tooling, developer tools
 
 ## Navigation
 
 - [Think / Chinese](${siteUrl}/): Default Chinese public thinking surface.
 - [Think / English](${siteUrl}/en/): English mirror of the Think surface.
-- [Build](${siteUrl}/build/): Project index for shipped tools, products, repositories, and demos.
+- [Build / Chinese](${siteUrl}/build/): Chinese project index for shipped tools, products, repositories, and demos.
+- [Build / English](${siteUrl}/en/build/): English mirror of the project index.
 
 ## Think / English
 
@@ -264,7 +280,8 @@ ${zhLinks}
 - [Sitemap](${siteUrl}/sitemap.xml): Search engine crawl map.
 - [Robots](${siteUrl}/robots.txt): Crawl access policy.
 - [Think JSON-LD](${siteUrl}/): Includes CollectionPage and BlogPosting structured data for public notes.
-- [Build JSON-LD](${siteUrl}/build/): Includes ProfilePage, Person, WebSite, and project ItemList structured data.
+- [Build JSON-LD / Chinese](${siteUrl}/build/): Includes ProfilePage, Person, WebSite, and project ItemList structured data.
+- [Build JSON-LD / English](${siteUrl}/en/build/): English mirror of the Build structured data.
 `;
   fs.writeFileSync(path.join(projectRoot, 'public/llms.txt'), llms);
 }
@@ -281,7 +298,7 @@ async function main() {
     const targetPath = path.join(notesDir, targetFile);
     const existing = fs.existsSync(targetPath) ? parseFrontmatter(fs.readFileSync(targetPath, 'utf8')) : null;
 
-    if (existing && existing.data.generatedTranslation !== true) {
+    if (existing) {
       written.push({ sourceSlug, file: targetFile, title: existing.data.title, routeSlug: existing.data.routeSlug || sourceSlug });
       continue;
     }

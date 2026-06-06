@@ -3,7 +3,9 @@
 
 成员清单
 context-window-is-empty-land-en.md: Think 英文文章，本地手写内容，标题《Context Window Is Empty Land》。
+html-is-new-world-jpg-en.md: Think 英文文章，本地手写内容，标题《HTML Is the New World's JPG》。
 context-window-is-empty-land.md: Think 中文文章，同步自 Notion 页面并本地整理，标题《上下文窗口是一块空地》。
+html-is-new-world-jpg.md: Think 中文文章，同步自 Notion 页面并本地整理，标题《HTML是新世界的JPG》。
 spend-token-on-useless-things-en.md: Think 英文文章，本地手写内容，标题《Spend Token on Useless Things》。
 spend-token-on-useless-things.md: Think 中文文章，本地手写内容，标题《把 Token 花在没用的地方》。
 正确与模糊ai的意义-en.md: Think 英文文章，机器翻译自中文源，标题《Correctness and ambiguity, the meaning of AI.》。
@@ -78,8 +80,8 @@ not-all-problems-need-solving.md: Think 中文文章，同步自 Notion Thinking
 良好睡眠周期.md: Think 中文文章，同步自 Notion Thinking 数据库，标题《良好睡眠周期》。
 压力山大到底是什么-en.md: Think 英文文章，机器翻译自中文源，标题《What exactly is stress?》。
 压力山大到底是什么.md: Think 中文文章，同步自 Notion Thinking 数据库，标题《压力山大到底是什么？》。
-notion-sync-manifest.json: Notion Thinking 同步清单，记录最近一次同步时间、数量和生成中文文件 slug。
-translation-sync-manifest.json: 英文翻译同步清单，记录最近一次翻译时间、数量和 routeSlug。
+notion-sync-manifest.json: Notion Thinking 同步清单，记录最近一次同步时间、数量和生成 slug。
+translation-sync-manifest.json: 英文翻译同步清单，记录最近一次翻译时间、数量和生成 slug。
 
 法则: 一文一文件·frontmatter 最小·正文即真相源·中英同 key
 
