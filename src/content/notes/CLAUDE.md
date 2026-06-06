@@ -2,6 +2,8 @@
 > L2 | 父级: ../CLAUDE.md
 
 成员清单
+context-window-is-empty-land-en.md: Think 英文文章，本地手写内容，标题《Context Window Is Empty Land》。
+context-window-is-empty-land.md: Think 中文文章，同步自 Notion 页面并本地整理，标题《上下文窗口是一块空地》。
 spend-token-on-useless-things-en.md: Think 英文文章，本地手写内容，标题《Spend Token on Useless Things》。
 spend-token-on-useless-things.md: Think 中文文章，本地手写内容，标题《把 Token 花在没用的地方》。
 正确与模糊ai的意义-en.md: Think 英文文章，机器翻译自中文源，标题《Correctness and ambiguity, the meaning of AI.》。
