@@ -2,12 +2,17 @@
 Astro + Markdown content collections + React islands + Three.js + TailwindCSS v4 + shadcn tokens
 
 <directory>
+.github/ - GitHub 自动化层 (1子目录: workflows)
 public/ - 静态直出资产层 (1子目录: marks)
 scripts/ - 本地同步脚本层 (2文件: sync-notion-thinking.mjs, translate-notes.mjs)
 src/ - Astro 源码层 (6子目录: components, content, layouts, lib, pages, styles)
 </directory>
 
 <config>
+.github/CLAUDE.md - L2 GitHub 自动化地图，记录 CI 发布边界
+.github/workflows/ - GitHub Actions 工作流目录，连接 main push 与 Cloudflare Worker 生产发布
+.github/workflows/CLAUDE.md - L2 workflow 地图，记录 deploy.yml 的职责
+.github/workflows/deploy.yml - 生产部署工作流，构建 Astro 并用 Wrangler 发布 dist 到 Cloudflare Worker `yeshu-dev`，关闭 experimental autoconfig 防止重复创建 SESSION KV
 astro.config.mjs - Astro 构建配置，接入 React island、Tailwind v4 和 @/src 别名
 components.json - shadcn 配置文件，记录 Radix Nova 预设、Tailwind v4 CSS 入口和路径别名
 DESIGN.md - 设计系统契约，定义 Field Journal Annex 风格、组件抽象顺序和后续重构边界
@@ -23,6 +28,7 @@ package-lock.json - npm 锁文件，固定依赖解析结果
 scripts/CLAUDE.md - L2 同步脚本地图，记录 Notion 到 notes 的本地投射边界
 scripts/sync-notion-thinking.mjs - Notion Thinking 同步脚本，读取本机登录态并生成 notes Markdown，不打印密钥
 scripts/translate-notes.mjs - notes 英文镜像生成脚本，翻译中文 Markdown 并刷新 sitemap、llms 和内容地图
+wrangler.jsonc - Cloudflare Worker 部署配置，固定 `yeshu-dev`、dist assets、trailing slash、兼容 flag 和既有 SESSION KV
 .gitignore - 忽略依赖、构建产物、Astro 缓存和系统文件
 CLAUDE.md - L1 项目宪法，记录当前架构地图
 </config>
@@ -30,6 +36,7 @@ CLAUDE.md - L1 项目宪法，记录当前架构地图
 法则: 极简·稳定·导航·版本精确
 
 ## 变更日志
+- 2026-06-06: 新增 GitHub Actions 到 Cloudflare Worker `yeshu-dev` 的自动部署配置，让 main push 构建 dist 并发布到 yeshu.dev，并显式绑定既有 SESSION KV 防止 Wrangler autoconfig 重复创建命名空间。
 - 2026-06-02: 补齐 Build 双语路由，新增 /en/build/ 与 build-en.md，让 JournalLayout 接入常驻 CN/EN 切换和 Think/Build i18n 路径。
 - 2026-06-02: 新增 notes i18n 路由与翻译同步器，生成 /en/ 英文 Think 首页、英文文章页、translation manifest、sitemap 与 llms 双语入口，并将 CN/EN 切换固定到顶栏导航组；LoadingIntro 改为会话首次加载才显示。
 - 2026-06-02: 将载入封面抽象为通用 LoadingIntro，页面载入时居中揭示 YESHU LOADING.....。
