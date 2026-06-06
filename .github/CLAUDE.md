@@ -2,8 +2,8 @@
 > L2 | 父级: ../CLAUDE.md
 
 成员清单
-workflows/: GitHub Actions 自动化目录，当前只负责把 main 分支构建结果部署到 Cloudflare Worker `yeshu-dev`。
+当前无 GitHub Actions 工作流；生产发布交给 Cloudflare Worker Builds 读取 `wrangler.jsonc`。
 
-法则: CI 是发布真相源·生产部署不靠人肉记忆
+法则: Cloudflare Worker Builds 是发布真相源·GitHub 只保存代码
 
 [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md

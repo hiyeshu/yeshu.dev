@@ -1,13 +1,17 @@
 {
-  // [INPUT]: 依赖 npm run build 生成的 dist/ 静态产物、Cloudflare Worker yeshu-dev 和既有 KV yeshu-dev-session
-  // [OUTPUT]: 对外提供 Wrangler 生产部署配置，把 dist/ 作为 Worker Static Assets 发布，并阻止 autoconfig 重复创建 SESSION
-  // [POS]: 项目根部署契约，被 GitHub Actions deploy.yml 和本地 Wrangler deploy 共用，显式接住 Cloudflare 推断出的 SESSION 绑定
+  // [INPUT]: 依赖 npm run build 生成的 dist/ 静态产物、Cloudflare Worker Builds 和既有 KV yeshu-dev-session
+  // [OUTPUT]: 对外提供 Wrangler 生产部署配置，部署前构建 Astro，把 dist/ 作为 Worker Static Assets 发布
+  // [POS]: 项目根部署契约，被 Cloudflare Worker Builds 和本地 Wrangler deploy 共用，显式接住 SESSION KV
   // [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
   "name": "yeshu-dev",
+  "account_id": "2e46d86d7ad223120aae0ebf077666c8",
   "compatibility_date": "2026-06-02",
   "compatibility_flags": [
     "global_fetch_strictly_public"
   ],
+  "build": {
+    "command": "npm run build"
+  },
   "assets": {
     "directory": "./dist",
     "html_handling": "auto-trailing-slash",
