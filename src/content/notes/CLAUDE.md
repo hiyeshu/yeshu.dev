@@ -2,6 +2,8 @@
 > L2 | 父级: ../CLAUDE.md
 
 成员清单
+skill-is-agent-qr-code-en.md: Think 英文文章，本地手写内容，标题《A Skill Is an Agent's QR Code》。
+skill-is-agent-qr-code.md: Think 中文文章，本地手写内容，标题《Skill 是 agent 的二维码》。
 context-window-is-empty-land-en.md: Think 英文文章，本地手写内容，标题《Context Window Is Empty Land》。
 html-is-new-world-jpg-en.md: Think 英文文章，本地手写内容，标题《HTML Is the New World's JPG》。
 context-window-is-empty-land.md: Think 中文文章，同步自 Notion 页面并本地整理，标题《上下文窗口是一块空地》。

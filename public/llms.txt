@@ -28,6 +28,7 @@ Primary identity:
 
 ## Think / English
 
+- [A Skill Is an Agent's QR Code](https://yeshu.dev/en/notes/skill-is-agent-qr-code/): A skill is not an advanced prompt package. It is a small, scannable entry point that expands into capabilities, workflows, CLI tools, and services.
 - [Context Window Is Empty Land](https://yeshu.dev/en/notes/context-window-is-empty-land/): A context window is not a warehouse. It is fixed land that must be planned, built, and kept partly empty for the person speaking now.
 - [HTML Is the New World's JPG](https://yeshu.dev/en/notes/html-is-new-world-jpg/): AI-generated HTML, on the consumption side, is like JPG: not a source file, but a compressed format meant to be seen.
 - [Spend Token on Useless Things](https://yeshu.dev/en/notes/spend-token-on-useless-things/): Agent loops, like people, are products of their environments. Token can be spent not only on output, but on shaping the environment an agent lives in.
@@ -70,6 +71,7 @@ Primary identity:
 
 ## Think / Chinese
 
+- [Skill 是 agent 的二维码](https://yeshu.dev/notes/skill-is-agent-qr-code/): Skill 不是高级 prompt 包，而是 agent 世界里的二维码：一个小而标准的入口，被扫到以后才展开能力、流程、CLI 和服务。
 - [上下文窗口是一块空地](https://yeshu.dev/notes/context-window-is-empty-land/): 上下文窗口不是仓库，而是一块面积固定的空地。做 agent 之前，先问这块地为谁留，谁画图，谁施工。
 - [HTML是新世界的JPG](https://yeshu.dev/notes/html-is-new-world-jpg/): AI 生成的 HTML 在消费侧像 JPG：不是源文件，而是给人看的压缩格式。
 - [把 Token 花在没用的地方](https://yeshu.dev/notes/spend-token-on-useless-things/): Agent loop 和人一样，都是环境的产物。Token 不只用来产出，也可以用来塑造 agent 的环境。

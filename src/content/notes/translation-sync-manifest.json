@@ -1,6 +1,6 @@
 {
-  "translatedAt": "2026-06-06T15:49:25.102Z",
-  "count": 39,
+  "translatedAt": "2026-06-17T15:00:27.438Z",
+  "count": 40,
   "notes": [
     {
       "sourceSlug": "2022年问自己",
@@ -25,6 +25,12 @@
       "file": "not-all-problems-need-solving-en.md",
       "title": "Not all problems need to be solved",
       "routeSlug": "not-all-problems-need-to-be-solved"
+    },
+    {
+      "sourceSlug": "skill-is-agent-qr-code",
+      "file": "skill-is-agent-qr-code-en.md",
+      "title": "A Skill Is an Agent's QR Code",
+      "routeSlug": "skill-is-agent-qr-code"
     },
     {
       "sourceSlug": "spend-token-on-useless-things",
