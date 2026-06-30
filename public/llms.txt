@@ -117,6 +117,8 @@ Primary identity:
 - [GitHub / hiyeshu](https://github.com/hiyeshu): Public code surface for experiments, product scaffolds, and agent-facing tools.
 - [Kyo](https://www.kyo.is/): Spatial bookmark manager and AI OS product surface.
 - [codeck](https://codeck.sh/): AI presentation tool that turns notes, docs, and data into polished HTML presentations.
+- [TodayCard](https://todaycard.app/): AI decision card app that turns one question into four draggable, flippable seeded choices.
+- [fitness-island](https://github.com/hiyeshu/fitness-island): Agent skill for turning real fitness constraints into an Animal Crossing-style habit page.
 - [trip-map-builder](https://github.com/hiyeshu/trip-map-builder): Agent skill for travel planning, Xiaohongshu research, and interactive map generation.
 
 ## Machine-Readable Signals
