@@ -1,7 +1,7 @@
 /*
  * [INPUT]: 依赖 src/index.css 的 Tailwind/shadcn token，依赖 JournalLayout、NoteLayout、FieldFigure 和 ASCIIIcon 的 class 结构
- * [OUTPUT]: 对外提供 yeshu.dev 的 journal annex 视觉系统、固定外框、Think/Build 状态导航、ASCII 项目图标场、Build profile contact 行、通用载入封面、notes 阅读版式、note hover 点阵纹理、标题日期侧栏和 CN/EN 语言开关
- * [POS]: styles 的站点样式层，复刻参考 HTML 的黑白边框、固定期刊框架、统一当前项标记、Build 身份名片、通用载入解密封面、ASCII 图版气质、Markdown notes 排版、列表纹理反馈和双语切换控件
+ * [OUTPUT]: 对外提供 yeshu.dev 的 journal annex 视觉系统、桌面固定外框、移动端文档流滚动、Think/Build 状态导航、ASCII 项目图标场、Build profile contact 行、通用载入封面、notes 阅读版式、note hover 点阵纹理、标题日期侧栏和 CN/EN 语言开关
+ * [POS]: styles 的站点样式层，复刻参考 HTML 的黑白边框、桌面期刊框架、移动阅读流、统一当前项标记、Build 身份名片、通用载入解密封面、ASCII 图版气质、Markdown notes 排版、列表纹理反馈和双语切换控件
  * [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
  */
 
@@ -1066,13 +1066,23 @@ a {
 }
 
 @media (max-width: 820px) {
+  html {
+    height: auto;
+    min-height: 100%;
+  }
+
   body {
+    height: auto;
+    min-height: 100dvh;
     padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
 
   .journal-wrapper {
     min-height: 100dvh;
     height: auto;
+    overflow: visible;
     border-left: 0;
     border-right: 0;
   }
@@ -1084,6 +1094,12 @@ a {
 
   .journal-main {
     flex: none;
+    overflow: visible;
+  }
+
+  .notes-main {
+    flex: none;
+    min-height: auto;
     overflow: visible;
   }
 
