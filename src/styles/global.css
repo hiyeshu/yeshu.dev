@@ -423,6 +423,12 @@ a {
   overflow-wrap: anywhere;
 }
 
+.project-copy h2.project-name-unbroken {
+  max-width: none;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
 .project-copy p {
   max-width: 34rem;
   margin: 1.15rem 0 0;
