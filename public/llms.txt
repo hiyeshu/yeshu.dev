@@ -71,6 +71,7 @@ Primary identity:
 
 ## Think / Chinese
 
+- [模型就像乐器](https://yeshu.dev/notes/models-are-instruments/): 模型就像不同的乐器，用户真正关心的不是参数和做工，而是好不好听、贵不贵、能不能发朋友圈。
 - [关于工具和作品](https://yeshu.dev/notes/tools-and-works/): 工具的限制逼人想清楚，作品的门槛从来不只在器材，也在使用工具的人。
 - [Skill 是 agent 的二维码](https://yeshu.dev/notes/skill-is-agent-qr-code/): Skill 不是高级 prompt 包，而是 agent 世界里的二维码：一个小而标准的入口，被扫到以后才展开能力、流程、CLI 和服务。
 - [上下文窗口是一块空地](https://yeshu.dev/notes/context-window-is-empty-land/): 上下文窗口不是仓库，而是一块面积固定的空地。做 agent 之前，先问这块地为谁留，谁画图，谁施工。

@@ -3,6 +3,7 @@
 
 成员清单
 favicon.svg: 站点 favicon，来自用户提供的 yeshu.svg，Vite public 根路径直出为 /favicon.svg
+model-as-instruments.png: 《模型就像乐器》文章末尾配图，展示模型与乐器的类比关系。
 llms.txt: LLM 上下文入口，概括 Yeshu 身份、Think/Build 双语导航、含 MapleSprite/TodayCard/fitness-island/Hangtola 的项目、文章和机器可读信号。
 marks/: 项目图版标识资产目录，保存本地点阵渲染源 SVG。
 robots.txt: 爬虫访问策略入口，允许抓取公开页面并指向 sitemap.xml。
