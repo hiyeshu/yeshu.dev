@@ -2,6 +2,7 @@
 > L2 | 父级: ../CLAUDE.md
 
 成员清单
+tools-and-works.md: Think 中文文章，本地手写内容，标题《关于工具和作品》。
 skill-is-agent-qr-code-en.md: Think 英文文章，本地手写内容，标题《A Skill Is an Agent's QR Code》。
 skill-is-agent-qr-code.md: Think 中文文章，本地手写内容，标题《Skill 是 agent 的二维码》。
 context-window-is-empty-land-en.md: Think 英文文章，本地手写内容，标题《Context Window Is Empty Land》。
