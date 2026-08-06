@@ -33,6 +33,7 @@ CLAUDE.md - L1 项目宪法，记录当前架构地图
 法则: 极简·稳定·导航·版本精确
 
 ## 变更日志
+- 2026-08-06: Build 双语索引新增 Hangtola 夯到拉在线榜单编辑器，补齐公开项目描述、LLM 入口与 sitemap 更新时间。
 - 2026-07-10: Build 双语索引新增 MapleSprite 线上产品卡，补齐本地枫叶像素标识、长项目名防拆分、LLM 项目入口与 sitemap 更新时间；公开页面只指向产品域名，不暴露源码仓库。
 - 2026-06-07: 收敛发布真相源到 Cloudflare Worker Builds，删除 GitHub Actions 部署入口；`wrangler.jsonc` 显式写入 account_id 与 `build.command`，并把 Wrangler 锁进 devDependency，避免 Dashboard 构建命令缺失或临时下载新版导致部署漂移。
 - 2026-06-06: 新增 GitHub Actions 到 Cloudflare Worker `yeshu-dev` 的自动部署配置，让 main push 构建 dist 并发布到 yeshu.dev，并显式绑定既有 SESSION KV 防止 Wrangler autoconfig 重复创建命名空间。

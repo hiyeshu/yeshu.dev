@@ -121,6 +121,7 @@ Primary identity:
 - [MapleSprite](https://maplesprite.com/): Creator-ready pixel character generator for text and reference-image workflows, powered by Maple 1.
 - [fitness-island](https://github.com/hiyeshu/fitness-island): Agent skill for turning real fitness constraints into an Animal Crossing-style habit page.
 - [trip-map-builder](https://github.com/hiyeshu/trip-map-builder): Agent skill for travel planning, Xiaohongshu research, and interactive map generation.
+- [Hangtola 夯到拉](https://hangtola.app/): Open Agent Skill and offline tier list editor for arranging images and text into editable rankings and transparent PNG exports.
 
 ## Machine-Readable Signals
 

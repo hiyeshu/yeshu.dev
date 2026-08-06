@@ -4,7 +4,7 @@ siteUrl: "https://yeshu.dev"
 canonicalPath: "/build/"
 masthead: "faction"
 browserTitle: "Yeshu Build | AI 产品、Agent 工作流和公开代码"
-description: "Yeshu 在构建 AI 产品、agent 工作流和小型公开软件系统，包括 Kyo、MapleSprite、TodayCard、codeck、fitness-island 和 trip-map-builder。"
+description: "Yeshu 在构建 AI 产品、agent 工作流和小型公开软件系统，包括 Kyo、MapleSprite、TodayCard、codeck、fitness-island、trip-map-builder 和 Hangtola。"
 keywords:
   - "Yeshu"
   - "hiyeshu"
@@ -16,8 +16,10 @@ keywords:
   - "codeck"
   - "fitness-island"
   - "trip-map-builder"
+  - "Hangtola"
+  - "夯到拉"
   - "Markdown 优先网站"
-dateModified: "2026-07-10"
+dateModified: "2026-08-06"
 identity:
   name: "Yeshu"
   alternateNames:
@@ -36,7 +38,7 @@ identity:
     - "开发者工具"
 eyebrow: "ANNEX DOC NO. YESHU-001 | PERSONAL SYSTEMS LAB"
 volume: "01.A"
-dateLabel: "JUL 2026"
+dateLabel: "AUG 2026"
 doi: "yeshu.dev/build"
 abstractTitle: "YESHU.DEV"
 links: []
@@ -188,6 +190,25 @@ projects:
         value: "小红书"
       - label: "输出"
         value: "地图"
+  - id: "hangtola"
+    figure: "FIG. 7"
+    name: "Hangtola 夯到拉"
+    kind: "榜单编辑器"
+    href: "https://hangtola.app/"
+    visual:
+      type: "text"
+      value: "夯"
+      label: "Hangtola 文字标识"
+    status: "在线编辑器"
+    description: "把图片、图片配文和纯文字排成可编辑的 tier list，并导出干净透明 PNG。"
+    signal: "一个开放 Skill，也是一份零依赖的离线编辑器。"
+    metrics:
+      - label: "输入"
+        value: "图片 + 文字"
+      - label: "编辑"
+        value: "拖拽定档"
+      - label: "输出"
+        value: "透明 PNG"
 ---
 
 AI coder by night. I build small, useful systems at the edge of design and code: agent workflows, AI products, and quiet tools that make messy ideas easier to use. I love simplifying the complex and beautifying the simple. From Ganzhou, cat lover, fueled by coffee.

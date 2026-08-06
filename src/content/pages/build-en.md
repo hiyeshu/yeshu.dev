@@ -4,7 +4,7 @@ siteUrl: "https://yeshu.dev"
 canonicalPath: "/en/build/"
 masthead: "faction"
 browserTitle: "Yeshu Build | AI products, agent workflows, and public code"
-description: "Yeshu builds AI products, agent workflows, and small public software systems including Kyo, MapleSprite, TodayCard, codeck, fitness-island, and trip-map-builder."
+description: "Yeshu builds AI products, agent workflows, and small public software systems including Kyo, MapleSprite, TodayCard, codeck, fitness-island, trip-map-builder, and Hangtola."
 keywords:
   - "Yeshu"
   - "hiyeshu"
@@ -16,8 +16,10 @@ keywords:
   - "codeck"
   - "fitness-island"
   - "trip-map-builder"
+  - "Hangtola"
+  - "tier list editor"
   - "Markdown-first websites"
-dateModified: "2026-07-10"
+dateModified: "2026-08-06"
 identity:
   name: "Yeshu"
   alternateNames:
@@ -36,7 +38,7 @@ identity:
     - "developer tools"
 eyebrow: "ANNEX DOC NO. YESHU-001 | PERSONAL SYSTEMS LAB"
 volume: "01.A"
-dateLabel: "JUL 2026"
+dateLabel: "AUG 2026"
 doi: "yeshu.dev/build"
 abstractTitle: "YESHU.DEV"
 links: []
@@ -188,6 +190,25 @@ projects:
         value: "XHS"
       - label: "Output"
         value: "map"
+  - id: "hangtola"
+    figure: "FIG. 7"
+    name: "Hangtola"
+    kind: "Tier list editor"
+    href: "https://hangtola.app/"
+    visual:
+      type: "text"
+      value: "夯"
+      label: "Hangtola text mark"
+    status: "Online editor"
+    description: "Turns images, image notes, and plain text into editable tier lists with clean transparent PNG export."
+    signal: "An open Agent Skill and a zero-dependency offline editor in one."
+    metrics:
+      - label: "Input"
+        value: "images + text"
+      - label: "Edit"
+        value: "drag to rank"
+      - label: "Output"
+        value: "transparent PNG"
 ---
 
 AI coder by night. I build small, useful systems at the edge of design and code: agent workflows, AI products, and quiet tools that make messy ideas easier to use. I love simplifying the complex and beautifying the simple. From Ganzhou, cat lover, fueled by coffee.
