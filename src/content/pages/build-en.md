@@ -19,7 +19,7 @@ keywords:
   - "Hangtola"
   - "tier list editor"
   - "Markdown-first websites"
-dateModified: "2026-08-06"
+dateModified: "2026-10-17"
 identity:
   name: "Yeshu"
   alternateNames:
@@ -38,10 +38,12 @@ identity:
     - "developer tools"
 eyebrow: "ANNEX DOC NO. YESHU-001 | PERSONAL SYSTEMS LAB"
 volume: "01.A"
-dateLabel: "AUG 2026"
+dateLabel: "OCT 2026"
 doi: "yeshu.dev/build"
 abstractTitle: "YESHU.DEV"
-links: []
+links:
+  - label: "Profile & experience"
+    href: "https://www.hiyeshu.com/"
 controls:
   - label: "Mode"
     value: "Design × Code"
@@ -56,16 +58,16 @@ controls:
     href: "https://x.com/hiyeshu"
 projects:
   - id: "hangtola"
-    figure: "FIG. 1A"
+    figure: "FIG. 1"
     name: "Hangtola"
     kind: "Tier list editor"
     href: "https://hangtola.app/"
     visual:
-      type: "text"
-      value: "夯"
-      label: "Hangtola text mark"
+      type: "image"
+      value: "/marks/hangtola.svg"
+      label: "Hangtola"
     status: "Online editor"
-    description: "Turns images, image notes, and plain text into editable tier lists with clean transparent PNG export."
+    description: "Arrange images and text into editable tier lists with transparent PNG export."
     signal: "An open Agent Skill and a zero-dependency offline editor in one."
     metrics:
       - label: "Input"
@@ -75,7 +77,7 @@ projects:
       - label: "Output"
         value: "transparent PNG"
   - id: "todaycard"
-    figure: "FIG. 1B"
+    figure: "FIG. 2"
     name: "TodayCard"
     kind: "AI decision cards"
     href: "https://todaycard.app/"
@@ -83,9 +85,9 @@ projects:
     visual:
       type: "image"
       value: "/marks/todaycard.svg"
-      label: "TodayCard mark"
+      label: "TodayCard"
     status: "Live app"
-    description: "Enter one decision and get four draggable, flippable seeded cards."
+    description: "Explore possible actions through four decision cards."
     signal: "Turns hesitation into action-shaped choices."
     metrics:
       - label: "Entry"
@@ -95,17 +97,17 @@ projects:
       - label: "Install"
         value: "npx skills add"
   - id: "maplesprite"
-    figure: "FIG. 2"
+    figure: "FIG. 3"
     name: "MapleSprite"
-    kind: "Pixel character generator"
+    kind: "Pixel reference generation"
     href: "https://maplesprite.com/"
     visual:
       type: "image"
       value: "/marks/maplesprite.svg"
-      label: "MapleSprite pixel maple mark"
+      label: "MapleSprite"
     status: "Live app"
-    description: "Turns text or reference images into creator-ready retro pixel characters."
-    signal: "Compresses character references into consistent, reusable sprites."
+    description: "AI pixel reference generation for creators."
+    signal: "Explore characters and styles from text or reference images."
     metrics:
       - label: "Entry"
         value: "maplesprite.com"
@@ -114,16 +116,16 @@ projects:
       - label: "Flow"
         value: "Text/Image"
   - id: "fitness-island"
-    figure: "FIG. 3"
-    name: "fitness-island"
+    figure: "FIG. 4"
+    name: "Fitness Island"
     kind: "Fitness habit skill"
     href: "https://github.com/hiyeshu/fitness-island"
     visual:
       type: "image"
       value: "/marks/fitness-island.svg"
-      label: "fitness-island mark"
+      label: "Fitness Island"
     status: "Public skill"
-    description: "Generates Animal Crossing-style fitness habit pages from body constraints, goals, time windows, and equipment."
+    description: "A skill turning time and equipment constraints into workout plans and check-ins."
     signal: "Scans real constraints before building a daily habit system."
     metrics:
       - label: "Phases"
@@ -133,16 +135,16 @@ projects:
       - label: "Install"
         value: "npx skills add"
   - id: "trip-map-builder"
-    figure: "FIG. 4"
-    name: "trip-map-builder"
-    kind: "Travel map agent"
+    figure: "FIG. 5"
+    name: "Trip Map Builder"
+    kind: "Travel map skill"
     href: "https://github.com/hiyeshu/trip-map-builder"
     visual:
       type: "text"
       value: "MAP"
       label: "trip-map-builder field mark"
     status: "Trip planning"
-    description: "Plans a trip, researches Xiaohongshu, then renders an interactive map."
+    description: "A skill connecting itinerary planning, research, and interactive maps."
     signal: "Agent workflow as a usable artifact."
     metrics:
       - label: "Input"
@@ -152,17 +154,17 @@ projects:
       - label: "Output"
         value: "map"
   - id: "codeck"
-    figure: "FIG. 5"
+    figure: "FIG. 6"
     name: "codeck"
-    kind: "AI deck tool"
+    kind: "AI presentation skill"
     href: "https://codeck.sh/"
     source: "https://github.com/hiyeshu/codeck"
     visual:
       type: "image"
       value: "/marks/codeck.svg"
-      label: "codeck mark"
+      label: "codeck"
     status: "Deck builder"
-    description: "Turns notes, docs, and data into polished HTML presentations."
+    description: "A presentation skill connecting outline, design, review, and export."
     signal: "Source in, deck out."
     metrics:
       - label: "Install"
@@ -172,17 +174,17 @@ projects:
       - label: "Use"
         value: "slides"
   - id: "kyo"
-    figure: "FIG. 6"
+    figure: "FIG. 7"
     name: "Kyo"
-    kind: "Spatial AI OS"
-    href: "https://www.kyo.is/"
+    kind: "Spatial bookmark manager"
+    href: "https://kyo.is/"
     visual:
       type: "image"
       value: "/marks/kyo.svg"
-      label: "Kyo app icon"
+      label: "Kyo"
     status: "Product surface"
-    description: "A spatial bookmark manager shaped as a product node, not a plain link."
-    signal: "Taste, interface direction, and AI OS thinking."
+    description: "Your bookmarks, your operating system."
+    signal: "Organize bookmarks into a browsable spatial interface."
     metrics:
       - label: "Domain"
         value: "kyo.is"
@@ -190,8 +192,47 @@ projects:
         value: "product"
       - label: "Axis"
         value: "AI OS"
+  - id: "nicon"
+    figure: "FIG. 8"
+    name: "Nicon / 咪记本"
+    kind: "Card notebook"
+    href: "https://niconapp.com/"
+    visual:
+      type: "image"
+      value: "/marks/niconapp.png"
+      label: "Nicon / 咪记本"
+    status: "Public project"
+    description: "An independently built card notebook, developed with AI assistance."
+    signal: ""
+    metrics: []
+  - id: "mify"
+    figure: "FIG. 9"
+    name: "Mify"
+    kind: "Workout companion"
+    href: "http://mify.niconapp.com/"
+    visual:
+      type: "image"
+      value: "/marks/mify.png"
+      label: "Mify"
+    status: "Public project"
+    description: "A lightweight Bilibili workout companion app."
+    signal: ""
+    metrics: []
+  - id: "p5"
+    figure: "FIG. 10"
+    name: "AI Creative Studio"
+    kind: "Image effects tool"
+    href: "https://p5js.cc/"
+    visual:
+      type: "image"
+      value: "/marks/p5.svg"
+      label: "AI Creative Studio"
+    status: "Public project"
+    description: "A P5.js image effect generator."
+    signal: ""
+    metrics: []
   - id: "github"
-    figure: "FIG. 7"
+    figure: "FIG. 11"
     name: "hiyeshu / GitHub"
     kind: "Code index"
     href: "https://github.com/hiyeshu"
@@ -209,6 +250,15 @@ projects:
         value: "public"
       - label: "Role"
         value: "source"
+
 ---
 
-AI coder by night. I build small, useful systems at the edge of design and code: agent workflows, AI products, and quiet tools that make messy ideas easier to use. I love simplifying the complex and beautifying the simple. From Ganzhou, cat lover, fueled by coffee.
+<!--
+[INPUT]: 依赖本人公开产品、Skill 源码与官方图标事实；与 hiyeshu.com 的作品投影对齐
+[OUTPUT]: 提供 Build 双语作品目录、项目名称、产品入口、核心定位与图标数据
+[POS]: Build 内容层；维护十个作品的统一展示顺序，GitHub 作为额外代码索引
+[PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+-->
+
+
+I build small, useful systems at the edge of design and code: agent workflows, AI products, and quiet tools that make messy ideas easier to use. I love simplifying the complex and beautifying the simple. From Ganzhou, cat lover, fueled by coffee.

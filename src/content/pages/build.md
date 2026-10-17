@@ -19,7 +19,7 @@ keywords:
   - "Hangtola"
   - "夯到拉"
   - "Markdown 优先网站"
-dateModified: "2026-08-06"
+dateModified: "2026-10-17"
 identity:
   name: "Yeshu"
   alternateNames:
@@ -38,10 +38,12 @@ identity:
     - "开发者工具"
 eyebrow: "ANNEX DOC NO. YESHU-001 | PERSONAL SYSTEMS LAB"
 volume: "01.A"
-dateLabel: "AUG 2026"
+dateLabel: "OCT 2026"
 doi: "yeshu.dev/build"
 abstractTitle: "YESHU.DEV"
-links: []
+links:
+  - label: "个人主页与经历"
+    href: "https://www.hiyeshu.com/"
 controls:
   - label: "Mode"
     value: "Design × Code"
@@ -56,16 +58,16 @@ controls:
     href: "https://x.com/hiyeshu"
 projects:
   - id: "hangtola"
-    figure: "FIG. 1A"
+    figure: "FIG. 1"
     name: "Hangtola 夯到拉"
     kind: "榜单编辑器"
     href: "https://hangtola.app/"
     visual:
-      type: "text"
-      value: "夯"
-      label: "Hangtola 文字标识"
+      type: "image"
+      value: "/marks/hangtola.svg"
+      label: "Hangtola 夯到拉"
     status: "在线编辑器"
-    description: "把图片、图片配文和纯文字排成可编辑的 tier list，并导出干净透明 PNG。"
+    description: "把图片和文字排成可编辑榜单，导出透明 PNG。"
     signal: "一个开放 Skill，也是一份零依赖的离线编辑器。"
     metrics:
       - label: "输入"
@@ -75,7 +77,7 @@ projects:
       - label: "输出"
         value: "透明 PNG"
   - id: "todaycard"
-    figure: "FIG. 1B"
+    figure: "FIG. 2"
     name: "TodayCard"
     kind: "AI 决策卡片"
     href: "https://todaycard.app/"
@@ -83,9 +85,9 @@ projects:
     visual:
       type: "image"
       value: "/marks/todaycard.svg"
-      label: "TodayCard 标识"
+      label: "TodayCard"
     status: "线上应用"
-    description: "只输入一个决策题，生成 4 张可拖拽、可翻开的 seeded cards。"
+    description: "输入一个问题，用四张决策卡探索行动选择。"
     signal: "把犹豫压缩成能行动的选择。"
     metrics:
       - label: "入口"
@@ -95,17 +97,17 @@ projects:
       - label: "安装"
         value: "npx skills add"
   - id: "maplesprite"
-    figure: "FIG. 2"
+    figure: "FIG. 3"
     name: "MapleSprite"
-    kind: "像素角色生成器"
+    kind: "像素参考图生成"
     href: "https://maplesprite.com/"
     visual:
       type: "image"
       value: "/marks/maplesprite.svg"
-      label: "MapleSprite 枫叶像素标识"
+      label: "MapleSprite"
     status: "线上应用"
-    description: "输入文字或上传参考图，生成可直接用于创作的复古像素角色素材。"
-    signal: "把角色参考压缩成稳定、可复用的 sprite。"
+    description: "面向创作者的 AI 像素参考图生成工具。"
+    signal: "从文字或参考图开始，探索角色与风格。"
     metrics:
       - label: "入口"
         value: "maplesprite.com"
@@ -114,16 +116,16 @@ projects:
       - label: "流程"
         value: "Text/Image"
   - id: "fitness-island"
-    figure: "FIG. 3"
-    name: "fitness-island"
+    figure: "FIG. 4"
+    name: "动森训练岛 Skill"
     kind: "运动习惯 Skill"
     href: "https://github.com/hiyeshu/fitness-island"
     visual:
       type: "image"
       value: "/marks/fitness-island.svg"
-      label: "fitness-island 标识"
+      label: "动森训练岛 Skill"
     status: "公开 Skill"
-    description: "从身体约束、训练目标、时间窗口和器械信息生成动森风格运动打卡页。"
+    description: "根据时间与器械约束，生成训练计划和打卡页。"
     signal: "扫描现实约束，再生成每天能打开一次的习惯系统。"
     metrics:
       - label: "阶段"
@@ -133,16 +135,16 @@ projects:
       - label: "安装"
         value: "npx skills add"
   - id: "trip-map-builder"
-    figure: "FIG. 4"
-    name: "trip-map-builder"
-    kind: "旅行地图 Agent"
+    figure: "FIG. 5"
+    name: "旅行地图 Skill"
+    kind: "旅行地图 Skill"
     href: "https://github.com/hiyeshu/trip-map-builder"
     visual:
       type: "text"
       value: "MAP"
       label: "trip-map-builder field 标识"
     status: "旅行规划"
-    description: "先规划，再研究小红书，最后生成交互式地图。"
+    description: "串联行程规划、信息调研与交互式地图生成。"
     signal: "把 agent 工作流变成可用成品。"
     metrics:
       - label: "输入"
@@ -152,17 +154,17 @@ projects:
       - label: "输出"
         value: "地图"
   - id: "codeck"
-    figure: "FIG. 5"
+    figure: "FIG. 6"
     name: "codeck"
-    kind: "AI Deck 工具"
+    kind: "AI 演示文稿 Skill"
     href: "https://codeck.sh/"
     source: "https://github.com/hiyeshu/codeck"
     visual:
       type: "image"
       value: "/marks/codeck.svg"
-      label: "codeck 标识"
+      label: "codeck"
     status: "演示生成器"
-    description: "通过 AI 对话，把笔记、文档和数据变成精修 HTML 演示。"
+    description: "演示文稿 Skill：串联大纲、设计、审阅与导出。"
     signal: "素材进入，deck 输出。"
     metrics:
       - label: "安装"
@@ -172,17 +174,17 @@ projects:
       - label: "用途"
         value: "slides"
   - id: "kyo"
-    figure: "FIG. 6"
+    figure: "FIG. 7"
     name: "Kyo"
-    kind: "空间 AI OS"
-    href: "https://www.kyo.is/"
+    kind: "空间书签管理器"
+    href: "https://kyo.is/"
     visual:
       type: "image"
       value: "/marks/kyo.svg"
-      label: "Kyo 应用图标"
+      label: "Kyo"
     status: "产品表面"
-    description: "空间书签管理器，被呈现为产品节点，而不是普通链接。"
-    signal: "展示产品品味、界面方向和 AI OS 思考。"
+    description: "你的收藏夹，就是你的操作系统。"
+    signal: "把收藏整理成可浏览的空间界面。"
     metrics:
       - label: "域名"
         value: "kyo.is"
@@ -190,8 +192,47 @@ projects:
         value: "产品"
       - label: "轴线"
         value: "AI OS"
+  - id: "nicon"
+    figure: "FIG. 8"
+    name: "咪记本"
+    kind: "卡片笔记应用"
+    href: "https://niconapp.com/"
+    visual:
+      type: "image"
+      value: "/marks/niconapp.png"
+      label: "咪记本"
+    status: "\u516c\u5f00\u9879\u76ee"
+    description: "AI 辅助独立开发的卡片笔记应用。"
+    signal: ""
+    metrics: []
+  - id: "mify"
+    figure: "FIG. 9"
+    name: "Mify"
+    kind: "跟练助手"
+    href: "http://mify.niconapp.com/"
+    visual:
+      type: "image"
+      value: "/marks/mify.png"
+      label: "Mify"
+    status: "\u516c\u5f00\u9879\u76ee"
+    description: "轻量的 B 站跟练助手 App。"
+    signal: ""
+    metrics: []
+  - id: "p5"
+    figure: "FIG. 10"
+    name: "AI Creative Studio"
+    kind: "图像特效工具"
+    href: "https://p5js.cc/"
+    visual:
+      type: "image"
+      value: "/marks/p5.svg"
+      label: "AI Creative Studio"
+    status: "\u516c\u5f00\u9879\u76ee"
+    description: "P5.js 图像特效生成器。"
+    signal: ""
+    metrics: []
   - id: "github"
-    figure: "FIG. 7"
+    figure: "FIG. 11"
     name: "hiyeshu / GitHub"
     kind: "代码索引"
     href: "https://github.com/hiyeshu"
@@ -209,6 +250,15 @@ projects:
         value: "公开"
       - label: "角色"
         value: "源码"
+
 ---
 
-AI coder by night. I build small, useful systems at the edge of design and code: agent workflows, AI products, and quiet tools that make messy ideas easier to use. I love simplifying the complex and beautifying the simple. From Ganzhou, cat lover, fueled by coffee.
+<!--
+[INPUT]: 依赖本人公开产品、Skill 源码与官方图标事实；与 hiyeshu.com 的作品投影对齐
+[OUTPUT]: 提供 Build 双语作品目录、项目名称、产品入口、核心定位与图标数据
+[POS]: Build 内容层；维护十个作品的统一展示顺序，GitHub 作为额外代码索引
+[PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+-->
+
+
+I build small, useful systems at the edge of design and code: agent workflows, AI products, and quiet tools that make messy ideas easier to use. I love simplifying the complex and beautifying the simple. From Ganzhou, cat lover, fueled by coffee.

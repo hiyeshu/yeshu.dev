@@ -116,13 +116,17 @@ Primary identity:
 
 ## Projects
 
-- [Hangtola 夯到拉](https://hangtola.app/): Open Agent Skill and offline tier list editor for arranging images and text into editable rankings and transparent PNG exports.
-- [TodayCard](https://todaycard.app/): AI decision card app that turns one question into four draggable, flippable seeded choices.
-- [fitness-island](https://github.com/hiyeshu/fitness-island): Agent skill for turning real fitness constraints into an Animal Crossing-style habit page.
-- [trip-map-builder](https://github.com/hiyeshu/trip-map-builder): Agent skill for travel planning, Xiaohongshu research, and interactive map generation.
-- [codeck](https://codeck.sh/): AI presentation tool that turns notes, docs, and data into polished HTML presentations.
-- [MapleSprite](https://maplesprite.com/): Creator-ready pixel character generator for text and reference-image workflows, powered by Maple 1.
-- [Kyo](https://www.kyo.is/): Spatial bookmark manager and AI OS product surface.
+- [Personal profile](https://www.hiyeshu.com/): Career background and the same project catalogue in a compact paginated view.
+- [Hangtola](https://hangtola.app/): Arrange images and text into editable tier lists with transparent PNG export.
+- [TodayCard](https://todaycard.app/): Explore possible actions through four decision cards.
+- [MapleSprite](https://maplesprite.com/): AI pixel reference generation for creators.
+- [Fitness Island](https://github.com/hiyeshu/fitness-island): A skill turning time and equipment constraints into workout plans and check-ins.
+- [Trip Map Builder](https://github.com/hiyeshu/trip-map-builder): A skill connecting itinerary planning, research, and interactive maps.
+- [codeck](https://codeck.sh/): A presentation skill connecting outline, design, review, and export.
+- [Kyo](https://kyo.is/): Your bookmarks, your operating system.
+- [Nicon / 咪记本](https://niconapp.com/): An independently built card notebook, developed with AI assistance.
+- [Mify](http://mify.niconapp.com/): A lightweight Bilibili workout companion app.
+- [AI Creative Studio](https://p5js.cc/): A P5.js image effect generator.
 - [GitHub / hiyeshu](https://github.com/hiyeshu): Public code surface for experiments, product scaffolds, and agent-facing tools.
 
 ## Machine-Readable Signals
