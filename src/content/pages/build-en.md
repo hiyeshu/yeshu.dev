@@ -256,7 +256,7 @@ projects:
 <!--
 [INPUT]: 依赖本人公开产品、Skill 源码与官方图标事实；与 hiyeshu.com 的作品投影对齐
 [OUTPUT]: 提供 Build 双语作品目录、项目名称、产品入口、核心定位与图标数据
-[POS]: Build 内容层；维护十个作品的统一展示顺序，GitHub 作为额外代码索引
+[POS]: Build 内容层；维护十个完整作品的展示顺序；个人主页单独精选产品，GitHub 作为额外代码索引
 [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
 -->
 
