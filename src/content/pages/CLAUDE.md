@@ -9,4 +9,4 @@ build-en.md: 英文 Build Markdown 镜像，定义 /en/build/ 的 GEO 元数据�
 
 [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
 
-维护边界：Build 展示十个完整作品和 GitHub 索引。hiyeshu.com 按能力精选八个产品，每页六项。旅行地图和动森训练岛只在 Build 展示。两站核对作品名称、入口和核心定位。
+维护边界：Build 展示十个完整作品和 GitHub 索引。hiyeshu.com 按能力精选八个产品，一次展示，不分页。旅行地图和动森训练岛只在 Build 展示。两站核对作品名称、入口和核心定位。
