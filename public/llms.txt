@@ -116,6 +116,8 @@ Primary identity:
 
 ## Projects
 
+- [MSClassicFashion](https://msclassicfashion.com/): Independently designed and built with AI assistance; outfit styling, dye comparison, and animated previews for MapleStory Classic World players.
+
 - [Personal profile](https://www.hiyeshu.com/): Career background and selected products in a compact list.
 - [Hangtola](https://hangtola.app/): Arrange images and text into editable tier lists with transparent PNG export.
 - [TodayCard](https://todaycard.app/): Explore possible actions through four decision cards.

@@ -4,7 +4,7 @@ siteUrl: "https://yeshu.dev"
 canonicalPath: "/build/"
 masthead: "faction"
 browserTitle: "Yeshu Build | AI 产品、Agent 工作流和公开代码"
-description: "Yeshu 在构建 AI 产品、agent 工作流和小型公开软件系统，包括 Kyo、MapleSprite、TodayCard、codeck、fitness-island、trip-map-builder 和 Hangtola。"
+description: "Yeshu 在构建 AI 产品、agent 工作流和小型公开软件系统，包括 MSClassicFashion、Kyo、MapleSprite、TodayCard、codeck、fitness-island、trip-map-builder 和 Hangtola。"
 keywords:
   - "Yeshu"
   - "hiyeshu"
@@ -12,6 +12,7 @@ keywords:
   - "Agent 工作流"
   - "Kyo"
   - "TodayCard"
+  - "MSClassicFashion"
   - "MapleSprite"
   - "codeck"
   - "fitness-island"
@@ -19,7 +20,7 @@ keywords:
   - "Hangtola"
   - "夯到拉"
   - "Markdown 优先网站"
-dateModified: "2026-10-17"
+dateModified: "2026-10-21"
 identity:
   name: "Yeshu"
   alternateNames:
@@ -57,8 +58,27 @@ controls:
     value: "@hiyeshu"
     href: "https://x.com/hiyeshu"
 projects:
-  - id: "hangtola"
+  - id: "msclassicfashion"
     figure: "FIG. 1"
+    name: "MSClassicFashion"
+    kind: "角色搭配工具"
+    href: "https://msclassicfashion.com/"
+    visual:
+      type: "image"
+      value: "/marks/msclassicfashion.png"
+      label: "MSClassicFashion"
+    status: "线上应用"
+    description: "角色搭配、染色对比与动画预览工具。"
+    signal: "面向 MapleStory Classic World 玩家，独立完成产品设计与 AI 辅助开发。"
+    metrics:
+      - label: "搭配"
+        value: "服饰 / 发型 / 脸型"
+      - label: "预览"
+        value: "染色 / 动画"
+      - label: "保留"
+        value: "衣柜 / 导出"
+  - id: "hangtola"
+    figure: "FIG. 2"
     name: "Hangtola 夯到拉"
     kind: "榜单编辑器"
     href: "https://hangtola.app/"
@@ -77,7 +97,7 @@ projects:
       - label: "输出"
         value: "透明 PNG"
   - id: "todaycard"
-    figure: "FIG. 2"
+    figure: "FIG. 3"
     name: "TodayCard"
     kind: "AI 决策卡片"
     href: "https://todaycard.app/"
@@ -97,7 +117,7 @@ projects:
       - label: "安装"
         value: "npx skills add"
   - id: "maplesprite"
-    figure: "FIG. 3"
+    figure: "FIG. 4"
     name: "MapleSprite"
     kind: "像素参考图生成"
     href: "https://maplesprite.com/"
@@ -116,7 +136,7 @@ projects:
       - label: "流程"
         value: "Text/Image"
   - id: "fitness-island"
-    figure: "FIG. 4"
+    figure: "FIG. 5"
     name: "动森训练岛 Skill"
     kind: "运动习惯 Skill"
     href: "https://github.com/hiyeshu/fitness-island"
@@ -135,7 +155,7 @@ projects:
       - label: "安装"
         value: "npx skills add"
   - id: "trip-map-builder"
-    figure: "FIG. 5"
+    figure: "FIG. 6"
     name: "旅行地图 Skill"
     kind: "旅行地图 Skill"
     href: "https://github.com/hiyeshu/trip-map-builder"
@@ -154,7 +174,7 @@ projects:
       - label: "输出"
         value: "地图"
   - id: "codeck"
-    figure: "FIG. 6"
+    figure: "FIG. 7"
     name: "codeck"
     kind: "AI 演示文稿 Skill"
     href: "https://codeck.sh/"
@@ -174,7 +194,7 @@ projects:
       - label: "用途"
         value: "slides"
   - id: "kyo"
-    figure: "FIG. 7"
+    figure: "FIG. 8"
     name: "Kyo"
     kind: "空间书签管理器"
     href: "https://kyo.is/"
@@ -193,7 +213,7 @@ projects:
       - label: "轴线"
         value: "AI OS"
   - id: "nicon"
-    figure: "FIG. 8"
+    figure: "FIG. 9"
     name: "咪记本"
     kind: "卡片笔记应用"
     href: "https://niconapp.com/"
@@ -206,7 +226,7 @@ projects:
     signal: ""
     metrics: []
   - id: "mify"
-    figure: "FIG. 9"
+    figure: "FIG. 10"
     name: "Mify"
     kind: "跟练助手"
     href: "http://mify.niconapp.com/"
@@ -219,7 +239,7 @@ projects:
     signal: ""
     metrics: []
   - id: "p5"
-    figure: "FIG. 10"
+    figure: "FIG. 11"
     name: "AI Creative Studio"
     kind: "图像特效工具"
     href: "https://p5js.cc/"
@@ -232,7 +252,7 @@ projects:
     signal: ""
     metrics: []
   - id: "github"
-    figure: "FIG. 11"
+    figure: "FIG. 12"
     name: "hiyeshu / GitHub"
     kind: "代码索引"
     href: "https://github.com/hiyeshu"
@@ -256,7 +276,7 @@ projects:
 <!--
 [INPUT]: 依赖本人公开产品、Skill 源码与官方图标事实；与 hiyeshu.com 的作品投影对齐
 [OUTPUT]: 提供 Build 双语作品目录、项目名称、产品入口、核心定位与图标数据
-[POS]: Build 内容层；维护十个完整作品的展示顺序；个人主页单独精选产品，GitHub 作为额外代码索引
+[POS]: Build 内容层；维护十一个完整作品的展示顺序；个人主页单独精选产品，GitHub 作为额外代码索引
 [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
 -->
 

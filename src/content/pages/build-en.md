@@ -4,7 +4,7 @@ siteUrl: "https://yeshu.dev"
 canonicalPath: "/en/build/"
 masthead: "faction"
 browserTitle: "Yeshu Build | AI products, agent workflows, and public code"
-description: "Yeshu builds AI products, agent workflows, and small public software systems including Kyo, MapleSprite, TodayCard, codeck, fitness-island, trip-map-builder, and Hangtola."
+description: "Yeshu builds AI products, agent workflows, and small public software systems including MSClassicFashion, Kyo, MapleSprite, TodayCard, codeck, fitness-island, trip-map-builder, and Hangtola."
 keywords:
   - "Yeshu"
   - "hiyeshu"
@@ -12,6 +12,7 @@ keywords:
   - "agent workflows"
   - "Kyo"
   - "TodayCard"
+  - "MSClassicFashion"
   - "MapleSprite"
   - "codeck"
   - "fitness-island"
@@ -19,7 +20,7 @@ keywords:
   - "Hangtola"
   - "tier list editor"
   - "Markdown-first websites"
-dateModified: "2026-10-17"
+dateModified: "2026-10-21"
 identity:
   name: "Yeshu"
   alternateNames:
@@ -57,8 +58,27 @@ controls:
     value: "@hiyeshu"
     href: "https://x.com/hiyeshu"
 projects:
-  - id: "hangtola"
+  - id: "msclassicfashion"
     figure: "FIG. 1"
+    name: "MSClassicFashion"
+    kind: "Character outfit tool"
+    href: "https://msclassicfashion.com/"
+    visual:
+      type: "image"
+      value: "/marks/msclassicfashion.png"
+      label: "MSClassicFashion"
+    status: "Live product"
+    description: "A tool for outfit styling, dye comparison, and animated previews."
+    signal: "Independently designed and built with AI assistance for MapleStory Classic World players."
+    metrics:
+      - label: "Style"
+        value: "Outfit / Hair / Face"
+      - label: "Preview"
+        value: "Dyes / Animation"
+      - label: "Keep"
+        value: "Wardrobe / Export"
+  - id: "hangtola"
+    figure: "FIG. 2"
     name: "Hangtola"
     kind: "Tier list editor"
     href: "https://hangtola.app/"
@@ -77,7 +97,7 @@ projects:
       - label: "Output"
         value: "transparent PNG"
   - id: "todaycard"
-    figure: "FIG. 2"
+    figure: "FIG. 3"
     name: "TodayCard"
     kind: "AI decision cards"
     href: "https://todaycard.app/"
@@ -97,7 +117,7 @@ projects:
       - label: "Install"
         value: "npx skills add"
   - id: "maplesprite"
-    figure: "FIG. 3"
+    figure: "FIG. 4"
     name: "MapleSprite"
     kind: "Pixel reference generation"
     href: "https://maplesprite.com/"
@@ -116,7 +136,7 @@ projects:
       - label: "Flow"
         value: "Text/Image"
   - id: "fitness-island"
-    figure: "FIG. 4"
+    figure: "FIG. 5"
     name: "Fitness Island"
     kind: "Fitness habit skill"
     href: "https://github.com/hiyeshu/fitness-island"
@@ -135,7 +155,7 @@ projects:
       - label: "Install"
         value: "npx skills add"
   - id: "trip-map-builder"
-    figure: "FIG. 5"
+    figure: "FIG. 6"
     name: "Trip Map Builder"
     kind: "Travel map skill"
     href: "https://github.com/hiyeshu/trip-map-builder"
@@ -154,7 +174,7 @@ projects:
       - label: "Output"
         value: "map"
   - id: "codeck"
-    figure: "FIG. 6"
+    figure: "FIG. 7"
     name: "codeck"
     kind: "AI presentation skill"
     href: "https://codeck.sh/"
@@ -174,7 +194,7 @@ projects:
       - label: "Use"
         value: "slides"
   - id: "kyo"
-    figure: "FIG. 7"
+    figure: "FIG. 8"
     name: "Kyo"
     kind: "Spatial bookmark manager"
     href: "https://kyo.is/"
@@ -193,7 +213,7 @@ projects:
       - label: "Axis"
         value: "AI OS"
   - id: "nicon"
-    figure: "FIG. 8"
+    figure: "FIG. 9"
     name: "Nicon / 咪记本"
     kind: "Card notebook"
     href: "https://niconapp.com/"
@@ -206,7 +226,7 @@ projects:
     signal: ""
     metrics: []
   - id: "mify"
-    figure: "FIG. 9"
+    figure: "FIG. 10"
     name: "Mify"
     kind: "Workout companion"
     href: "http://mify.niconapp.com/"
@@ -219,7 +239,7 @@ projects:
     signal: ""
     metrics: []
   - id: "p5"
-    figure: "FIG. 10"
+    figure: "FIG. 11"
     name: "AI Creative Studio"
     kind: "Image effects tool"
     href: "https://p5js.cc/"
@@ -232,7 +252,7 @@ projects:
     signal: ""
     metrics: []
   - id: "github"
-    figure: "FIG. 11"
+    figure: "FIG. 12"
     name: "hiyeshu / GitHub"
     kind: "Code index"
     href: "https://github.com/hiyeshu"
@@ -256,7 +276,7 @@ projects:
 <!--
 [INPUT]: 依赖本人公开产品、Skill 源码与官方图标事实；与 hiyeshu.com 的作品投影对齐
 [OUTPUT]: 提供 Build 双语作品目录、项目名称、产品入口、核心定位与图标数据
-[POS]: Build 内容层；维护十个完整作品的展示顺序；个人主页单独精选产品，GitHub 作为额外代码索引
+[POS]: Build 内容层；维护十一个完整作品的展示顺序；个人主页单独精选产品，GitHub 作为额外代码索引
 [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
 -->
 
